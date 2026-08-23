@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Polaris Space Agency</title>
+  <meta name="description" content="Explore historical rocket launches, engineering cleanrooms, and deep space images captured by Polaris Space Agency.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="bootstrap4.2.1/bootstrap4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- Navigation Header -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-polaris">
+  <div class="container">
+    <a class="navbar-brand font-weight-bold" href="index.html">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" class="mr-2" style="vertical-align:middle;">
+        <ellipse cx="16" cy="16" rx="14" ry="5" stroke="var(--accent)" stroke-width="1.5" transform="rotate(-25 16 16)" stroke-dasharray="3 3"/>
+        <path d="M16 4 L18.5 12.5 L27 15 L18.5 17.5 L16 26 L13.5 17.5 L5 15 L13.5 12.5 Z" fill="var(--accent)"/>
+        <circle cx="16" cy="16" r="2.5" fill="#fff"/>
+      </svg>
+      POLARIS
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ml-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="missions.html">Missions</a></li>
+        <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+        <li class="nav-item active"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item ml-lg-3"><a class="btn btn-outline-light btn-sm px-3" href="login.html">Log In</a></li>
+        <li class="nav-item ml-lg-2"><a class="btn btn-primary btn-sm px-3" href="register.html">Sign Up</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Banner -->
+<div class="page-banner py-5 border-bottom" style="border-color:var(--border)!important;">
+  <div class="container">
+    <span class="text-uppercase font-weight-bold" style="font-size:0.72rem; color:var(--accent); letter-spacing:0.1em;">Visual Archives</span>
+    <h1 class="h2 font-weight-bold text-white mt-1">Space Exploration Gallery</h1>
+    <p class="text-muted mb-0">Select a category below to explore high-fidelity space photography and telescope surveys.</p>
+  </div>
+</div>
+
+<!-- Category Selection Screen (Visible by default) -->
+<section class="py-5" id="gallery-categories-screen">
+  <div class="container">
+    <div class="row">
+      <!-- Category 1: Launches -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="category-card" data-category="launch">
+          <img src="assets/images/gallery_rocket.jpg" alt="Launches" class="category-card-img">
+          <div class="p-3 text-center">
+            <h3 class="h5 font-weight-bold text-white mb-1">Launches</h3>
+            <span class="text-muted small">2 Items</span>
+          </div>
+        </div>
+      </div>
+      <!-- Category 2: Engineering -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="category-card" data-category="engineering">
+          <img src="assets/images/gallery_science.jpg" alt="Engineering" class="category-card-img">
+          <div class="p-3 text-center">
+            <h3 class="h5 font-weight-bold text-white mb-1">Engineering</h3>
+            <span class="text-muted small">2 Items</span>
+          </div>
+        </div>
+      </div>
+      <!-- Category 3: Deep Space -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="category-card" data-category="deepspace">
+          <img src="assets/images/gallery_nebula.jpg" alt="Deep Space" class="category-card-img">
+          <div class="p-3 text-center">
+            <h3 class="h5 font-weight-bold text-white mb-1">Deep Space</h3>
+            <span class="text-muted small">4 Items</span>
+          </div>
+        </div>
+      </div>
+      <!-- Category 4: Solar System -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="category-card" data-category="solarsystem">
+          <img src="assets/images/gallery_satellite.jpg" alt="Solar System" class="category-card-img">
+          <div class="p-3 text-center">
+            <h3 class="h5 font-weight-bold text-white mb-1">Solar System</h3>
+            <span class="text-muted small">4 Items</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Filtered Image Grid Screen (Hidden on load) -->
+<section class="py-5 d-none" id="gallery-images-screen">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-3" style="border-color:var(--border)!important;">
+      <h2 class="h3 font-weight-bold text-white mb-0" id="selected-category-title">Category</h2>
+      <button class="btn btn-outline-light btn-sm px-3" id="btn-back-categories">&larr; Back to Categories</button>
+    </div>
+    <div class="row">
+      <!-- Item: Rocket Launch -->
+      <div class="col-md-6 col-lg-4 mb-4 gallery-item launch">
+        <div class="gallery-card" data-toggle="modal" data-target="#lightbox-modal" data-img="assets/images/gallery_rocket.jpg" data-title="PSLV Heavy Ascent" data-desc="Long exposure night launch window above Sriharikota.">
+          <div class="gallery-card-img-wrap"><img src="assets/images/gallery_rocket.jpg" alt="Launch" class="gallery-card-img"></div>
+          <div class="mt-2"><span class="text-uppercase font-weight-bold" style="font-size:0.68rem; color:var(--accent);">Launch</span><h4 class="h6 font-weight-bold text-white mt-1">PSLV-42 Ingress Launch</h4></div>
+        </div>
+      </div>
+      <!-- Item: Engine Test -->
+      <div class="col-md-6 col-lg-4 mb-4 gallery-item launch">
+        <div class="gallery-card" data-toggle="modal" data-target="#lightbox-modal" data-img="assets/images/gallery_engine.jpg" data-title="Cryogenic Engine Test" data-desc="Hot-fire vacuum test of the Vikas-X upper stage generating 75kN thrust.">
+          <div class="gallery-card-img-wrap"><img src="assets/images/gallery_engine.jpg" alt="Engine" class="gallery-card-img"></div>
+          <div class="mt-2"><span class="text-uppercase font-weight-bold" style="font-size:0.68rem; color:var(--accent);">Launch</span><h4 class="h6 font-weight-bold text-white mt-1">Cryogenic Stage Hot-Fire</h4></div>
+        </div>
+      </div>
+      <!-- Item: Cleanroom -->
+      <div class="col-md-6 col-lg-4 mb-4 gallery-item engineering">
+        <div class="gallery-card" data-toggle="modal" data-target="#lightbox-modal" data-img="assets/images/gallery_science.jpg" data-title="Cleanroom Integration" data-desc="Aerospace technicians performing flight systems diagnostics on ARES-1.">
+          <div class="gallery-card-img-wrap"><img src="assets/images/gallery_science.jpg" alt="Cleanroom" class="gallery-card-img"></div>
+          <div class="mt-2"><span class="text-uppercase font-weight-bold" style="font-size:0.68rem; color:var(--accent);">Integration</span><h4 class="h6 font-weight-bold text-white mt-1">Payload Stage Assembly</h4></div>
+        </div>
+      </div>
+      <!-- Item: Telemetry Operations -->
+      <div class="col-md-6 col-lg-4 mb-4 gallery-item engineering">
+        <div class="gallery-card" data-toggle="modal" data-target="#lightbox-modal" data-img="assets/images/gallery_data.jpg" data-title="Telemetry Control" data-desc="Computing clusters analyzing orbit telemetry at Bengaluru HQ.">
+          <div class="gallery-card-img-wrap"><img src="assets/images/gallery_data.jpg" alt="Operations" class="gallery-card-img"></div>
+          <div class="mt-2"><span class="text-uppercase font-weight-bold" style="font-size:0.68rem; color:var(--accent);">Mission Control</span><h4 class="h6 font-weight-bold text-white mt-1">Telemetry Diagnostics</h4></div>
+        </div>
+      </div>
+      <!-- Item: Nebula 1 -->
+      <div class="col-md-6 col-lg-4 mb-4 gallery-item deepspace">
+        <div class="gallery-card" data-toggle="modal" data-target="#lightbox-modal" data-img="assets/images/gallery_nebula.jpg" data-title="Pillars of Star Birth" data-desc="Deep-field hydrogen-alpha exposure of a massive emission nebula.">
+          <div class="gallery-card-img-wrap"><img src="assets/images/gallery_nebula.jpg" alt="Nebula" class="gallery-card-img"></div>
+          <div class="mt-2"><span class="text-uppercase font-weight-bold" style="font-size:0.68rem; color:var(--accent);">Nebula Survey</span><h4 class="h6 font-weight-bold text-white mt-1">Emission Nebula Survey</h4></div>
+        </div>
+      </div>
+      <!-- Item: Galaxy -->
+      <div class="col-md-6 col-lg-4 mb-4 gallery-item deepspace">
+        <div class="gallery-card" data-toggle="modal" data-target="#lightbox-modal" data-img="assets/images/gallery_galaxy.jpg" data-title="Milky Way Core" data-desc="Optical study of the galactic center captured by Hanle Observatory.">
+          <div class="gallery-card-img-wrap"><img src="assets/images/gallery_galaxy.jpg" alt="Galaxy" class="gallery-card-img"></div>
+          <div class="mt-2"><span class="text-uppercase font-weight-bold" style="font-size:0.68rem; color:var(--accent);">Deep Sky</span><h4 class="h6 font-weight-bold text-white mt-1">Galactic Nucleus Profile</h4></div>
+        </div>
+      </div>
+      <!-- Item: Nebula 2 -->
+      <div class="col-md-6 col-lg-4 mb-4 gallery-item deepspace">
+        <div class="gallery-card" data-toggle="modal" data-target="#lightbox-modal" data-img="assets/images/gallery_nebula2.jpg" data-title="Orion Star Nursery" data-desc="Deep gas cloud layers and young blue stars in a close star-forming system.">
+          <div class="gallery-card-img-wrap"><img src="assets/images/gallery_nebula2.jpg" alt="Star Nursery" class="gallery-card-img"></div>
+          <div class="mt-2"><span class="text-uppercase font-weight-bold" style="font-size:0.68rem; color:var(--accent);">Nebula Survey</span><h4 class="h6 font-weight-bold text-white mt-1">Star Nursery Cluster</h4></div>
+        </div>
+      </div>
+      <!-- Item: Deep Space Horizon -->
+      <div class="col-md-6 col-lg-4 mb-4 gallery-item deepspace">
+        <div class="gallery-card" data-toggle="modal" data-target="#lightbox-modal" data-img="assets/images/gallery_deepspace.jpg" data-title="Hubble Deep Field" data-desc="Astronomical exposure revealing thousands of ancient galaxies.">
+          <div class="gallery-card-img-wrap"><img src="assets/images/gallery_deepspace.jpg" alt="Hubble Survey" class="gallery-card-img"></div>
+          <div class="mt-2"><span class="text-uppercase font-weight-bold" style="font-size:0.68rem; color:var(--accent);">Galaxy Clusters</span><h4 class="h6 font-weight-bold text-white mt-1">Deep Horizon Survey</h4></div>
+        </div>
+      </div>
+      <!-- Item: Satellite -->
+      <div class="col-md-6 col-lg-4 mb-4 gallery-item solarsystem">
+        <div class="gallery-card" data-toggle="modal" data-target="#lightbox-modal" data-img="assets/images/gallery_satellite.jpg" data-title="LEO Ingress" data-desc="Earth orbit telemetry showing orbital trajectories of constellation satellites.">
+          <div class="gallery-card-img-wrap"><img src="assets/images/gallery_satellite.jpg" alt="Satellite" class="gallery-card-img"></div>
+          <div class="mt-2"><span class="text-uppercase font-weight-bold" style="font-size:0.68rem; color:var(--accent);">Orbit Telemetry</span><h4 class="h6 font-weight-bold text-white mt-1">Earth Ingress Monitoring</h4></div>
+        </div>
+      </div>
+      <!-- Item: Moon -->
+      <div class="col-md-6 col-lg-4 mb-4 gallery-item solarsystem">
+        <div class="gallery-card" data-toggle="modal" data-target="#lightbox-modal" data-img="assets/images/gallery_moon.jpg" data-title="Lunar Tycho Sweep" data-desc="High-contrast sweep showing Tycho Crater impact debris and rays.">
+          <div class="gallery-card-img-wrap"><img src="assets/images/gallery_moon.jpg" alt="Moon" class="gallery-card-img"></div>
+          <div class="mt-2"><span class="text-uppercase font-weight-bold" style="font-size:0.68rem; color:var(--accent);">Lunar Orbiter</span><h4 class="h6 font-weight-bold text-white mt-1">Tycho Crater Sweep</h4></div>
+        </div>
+      </div>
+      <!-- Item: Sun -->
+      <div class="col-md-6 col-lg-4 mb-4 gallery-item solarsystem">
+        <div class="gallery-card" data-toggle="modal" data-target="#lightbox-modal" data-img="assets/images/gallery_sun.jpg" data-title="Solar Prominence" data-desc="Spectroheliograph capture showing coronal solar loop eruptions.">
+          <div class="gallery-card-img-wrap"><img src="assets/images/gallery_sun.jpg" alt="Sun" class="gallery-card-img"></div>
+          <div class="mt-2"><span class="text-uppercase font-weight-bold" style="font-size:0.68rem; color:var(--accent);">Heliophysics</span><h4 class="h6 font-weight-bold text-white mt-1">Solar Chromosphere</h4></div>
+        </div>
+      </div>
+      <!-- Item: ISS -->
+      <div class="col-md-6 col-lg-4 mb-4 gallery-item solarsystem">
+        <div class="gallery-card" data-toggle="modal" data-target="#lightbox-modal" data-img="assets/images/gallery_spacestation.jpg" data-title="Atmospheric Limb" data-desc="Photograph of Earth's atmosphere meeting the black void of space.">
+          <div class="gallery-card-img-wrap"><img src="assets/images/gallery_spacestation.jpg" alt="ISS Horizon" class="gallery-card-img"></div>
+          <div class="mt-2"><span class="text-uppercase font-weight-bold" style="font-size:0.68rem; color:var(--accent);">Space Station</span><h4 class="h6 font-weight-bold text-white mt-1">Atmospheric Horizon</h4></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div class="modal fade" id="lightbox-modal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content border-0 bg-black">
+      <div class="modal-header border-0 pb-0"><button type="button" class="close text-white" data-dismiss="modal">&times;</button></div>
+      <div class="modal-body p-4 text-center">
+        <img id="lightbox-img" src="" alt="View" class="img-fluid rounded mb-3" style="max-height:70vh; border:1px solid var(--border);">
+        <h4 id="lightbox-title" class="font-weight-bold text-white mb-2"></h4>
+        <p id="lightbox-desc" class="text-muted mb-0 small mx-auto" style="max-width:550px; line-height:1.6;"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer-polaris py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4 mb-md-0">
+        <div class="font-weight-bold text-white h5 mb-2">POLARIS</div>
+        <p class="text-muted small" style="line-height:1.7;">India's frontier space agency advancing launch technology, planetary exploration, and deep-space astronomy.</p>
+      </div>
+      <div class="col-md-2 offset-md-1 mb-4 mb-md-0">
+        <h6 class="text-white">Explore</h6>
+        <ul class="list-unstyled small">
+          <li><a href="about.html" class="text-muted">About Us</a></li>
+          <li><a href="missions.html" class="text-muted">Missions</a></li>
+          <li><a href="research.html" class="text-muted">Research</a></li>
+          <li><a href="gallery.html" class="text-muted">Gallery</a></li>
+          <li><a href="careers.html" class="text-muted">Careers</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2 mb-4 mb-md-0">
+        <h6 class="text-white">Account</h6>
+        <ul class="list-unstyled small">
+          <li><a href="register.html" class="text-muted">Sign Up</a></li>
+          <li><a href="login.html" class="text-muted">Log In</a></li>
+          <li><a href="contact.html" class="text-muted">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6 class="text-white">Headquarters</h6>
+        <p class="text-muted small" style="line-height:1.7;">Polaris Aerospace Park<br>Whitefield, Bengaluru 560066, India</p>
+      </div>
+    </div>
+    <div class="d-flex justify-content-between flex-wrap pt-3 mt-4 border-top small text-muted" style="border-color:var(--border)!important;">
+      <span>&copy; 2026 Polaris Space Agency. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- JavaScript Dependencies -->
+<script src="bootstrap4.2.1/jquery-3.7.1.min.js"></script>
+<script src="bootstrap4.2.1/bootstrap4.2.1/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

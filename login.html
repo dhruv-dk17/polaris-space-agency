@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In — Polaris Space Agency</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="bootstrap4.2.1/bootstrap4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- Navigation Header -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-polaris">
+  <div class="container">
+    <a class="navbar-brand font-weight-bold" href="index.html">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" class="mr-2" style="vertical-align:middle;">
+        <ellipse cx="16" cy="16" rx="14" ry="5" stroke="var(--accent)" stroke-width="1.5" transform="rotate(-25 16 16)" stroke-dasharray="3 3"/>
+        <path d="M16 4 L18.5 12.5 L27 15 L18.5 17.5 L16 26 L13.5 17.5 L5 15 L13.5 12.5 Z" fill="var(--accent)"/>
+        <circle cx="16" cy="16" r="2.5" fill="#fff"/>
+      </svg>
+      POLARIS
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ml-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="missions.html">Missions</a></li>
+        <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item ml-lg-3 active"><a class="btn btn-outline-light btn-sm px-3" href="login.html">Log In</a></li>
+        <li class="nav-item ml-lg-2"><a class="btn btn-primary btn-sm px-3" href="register.html">Sign Up</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Authentication Container -->
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+      <div class="calc-widget p-4 p-md-5 rounded">
+        <h1 class="h3 font-weight-bold text-white mb-1">Sign In</h1>
+        <p class="text-muted small mb-4">Access researcher portal and mission telemetry.</p>
+        
+        <!-- Login Form -->
+        <form id="login-form" novalidate>
+          <div class="mb-3">
+            <label class="text-uppercase text-muted font-weight-bold" style="font-size:0.7rem;">Email Address *</label>
+            <input type="email" id="login-email" class="form-control" placeholder="you@example.com" required>
+            <div class="invalid-feedback">Valid email required.</div>
+          </div>
+          <div class="mb-2">
+            <label class="text-uppercase text-muted font-weight-bold" style="font-size:0.7rem;">Password *</label>
+            <input type="password" id="login-password" class="form-control" placeholder="••••••••" required>
+            <div class="invalid-feedback">Password required.</div>
+          </div>
+          <div class="mb-3 text-right">
+            <a href="#" class="small" style="color:var(--accent);">Forgot password?</a>
+          </div>
+          
+          <!-- Status Messages -->
+          <div id="login-success" class="d-none p-3 mb-3 border rounded text-success small" style="background:rgba(34,197,94,0.1); border-color:rgba(34,197,94,0.3);">
+            Sign-in successful! Redirecting to dashboard...
+          </div>
+          <div id="login-error" class="d-none p-3 mb-3 border rounded text-danger small" style="background:rgba(239,68,68,0.1); border-color:rgba(239,68,68,0.3);">
+            Invalid credentials. Please verify email and password.
+          </div>
+          <button type="submit" class="btn btn-primary w-100 py-2">Sign In</button>
+        </form>
+
+        <div class="text-center mt-4 text-muted small">
+          Don't have an account? <a href="register.html" style="color:var(--accent); font-weight:600;">Create one</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript Dependencies -->
+<script src="bootstrap4.2.1/jquery-3.7.1.min.js"></script>
+<script src="bootstrap4.2.1/bootstrap4.2.1/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
