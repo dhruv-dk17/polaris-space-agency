@@ -34,6 +34,15 @@ a:hover { color: var(--accent) !important; }
 .navbar-polaris { background-color: var(--black); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1050; padding: 0.75rem 0; }
 .navbar-polaris .nav-link { color: #8a8a8a !important; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; transition: var(--transition); }
 .navbar-polaris .nav-link:hover, .navbar-polaris .nav-item.active .nav-link { color: #ffffff !important; }
+.navbar-toggler { border: 1px solid var(--border) !important; padding: 0.35rem 0.6rem; border-radius: 4px; }
+.navbar-toggler:focus { outline: none; box-shadow: 0 0 0 2px rgba(77,166,255,0.25); }
+
+/* Mobile Navigation */
+@media (max-width: 991.98px) {
+  .navbar-collapse { padding: 1rem 0.25rem 0.5rem; border-top: 1px solid var(--border); margin-top: 0.75rem; }
+  .navbar-polaris .nav-link { padding: 0.55rem 0.25rem !important; font-size: 0.85rem; }
+  .navbar-polaris .btn { display: inline-block; margin-top: 0.6rem; margin-right: 0.5rem; }
+}
 
 /* Buttons */
 .btn-primary { background-color: var(--accent) !important; border-color: var(--accent) !important; color: var(--black) !important; }
