@@ -4,27 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — Polaris Space Agency</title>
-  <meta name="description" content="Contact Polaris Space Agency in Bengaluru for research, media, launch services, and partnerships.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="bootstrap4.2.1/bootstrap4.2.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<!-- Navigation Header -->
-<nav class="navbar navbar-expand-lg navbar-dark navbar-polaris">
+<nav class="navbar navbar-expand-lg navbar-dark navbar-polaris sticky-top">
   <div class="container">
-    <a class="navbar-brand font-weight-bold" href="index.html">
-      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" class="mr-2" style="vertical-align:middle;">
-        <ellipse cx="16" cy="16" rx="14" ry="5" stroke="var(--accent)" stroke-width="1.5" transform="rotate(-25 16 16)" stroke-dasharray="3 3"/>
-        <path d="M16 4 L18.5 12.5 L27 15 L18.5 17.5 L16 26 L13.5 17.5 L5 15 L13.5 12.5 Z" fill="var(--accent)"/>
-        <circle cx="16" cy="16" r="2.5" fill="#fff"/>
-      </svg>
-      POLARIS
-    </a>
-    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <a class="navbar-brand font-weight-bold" href="index.html">POLARIS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ml-auto align-items-lg-center">
+      <ul class="navbar-nav ml-auto align-items-center">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="missions.html">Missions</a></li>
@@ -32,117 +22,77 @@
         <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
         <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
         <li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
-        <li class="nav-item ml-lg-3"><a class="btn btn-outline-light btn-sm px-3" href="login.html">Log In</a></li>
-        <li class="nav-item ml-lg-2"><a class="btn btn-primary btn-sm px-3" href="register.html">Sign Up</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Page Banner -->
-<div class="page-banner py-5 border-bottom" style="border-color:var(--border)!important;">
+<div class="py-4 border-bottom" style="border-color: gray;">
   <div class="container">
-    <span class="text-uppercase font-weight-bold" style="font-size:0.72rem; color:var(--accent); letter-spacing:0.1em;">Get in Touch</span>
-    <h1 class="h2 font-weight-bold text-white mt-1">Contact Polaris</h1>
-    <p class="text-muted mb-0">For media inquiries, research collaborations, launch partnerships, or general questions.</p>
+    <h1 class="h3 font-weight-bold text-white mb-1">Get in Touch</h1>
+    <p class="text-muted mb-0">For partnerships, launch services, and research inquiries.</p>
   </div>
 </div>
 
-<!-- Contact & Information Section -->
 <section class="py-5">
   <div class="container">
     <div class="row">
-      <!-- Contact Form -->
       <div class="col-lg-7 mb-4 mb-lg-0">
-        <div class="calc-widget p-4 p-md-5 rounded">
-          <h3 class="h4 font-weight-bold text-white mb-1">Send a Message</h3>
-          <p class="text-muted small mb-4">We typically respond within 3 business days.</p>
+        <div class="calc-widget">
+          <h2 class="h4 font-weight-bold text-white mb-3">Send a Message</h2>
           <form id="contact-form" novalidate>
-            <div class="row">
-              <div class="col-sm-6 mb-3"><label class="text-uppercase text-muted font-weight-bold" style="font-size:0.7rem;">First Name *</label><input type="text" id="con-fname" class="form-control" required></div>
-              <div class="col-sm-6 mb-3"><label class="text-uppercase text-muted font-weight-bold" style="font-size:0.7rem;">Last Name *</label><input type="text" id="con-lname" class="form-control" required></div>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label class="small text-muted font-weight-bold">First Name *</label>
+                <input type="text" id="con-fname" class="form-control" placeholder="First Name" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="small text-muted font-weight-bold">Last Name *</label>
+                <input type="text" id="con-lname" class="form-control" placeholder="Last Name" required>
+              </div>
             </div>
-            <div class="mb-3"><label class="text-uppercase text-muted font-weight-bold" style="font-size:0.7rem;">Email *</label><input type="email" id="con-email" class="form-control" required></div>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label class="small text-muted font-weight-bold">Email Address *</label>
+                <input type="email" id="con-email" class="form-control" placeholder="name@example.com" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="small text-muted font-weight-bold">Contact Number *</label>
+                <input type="text" id="con-phone" class="form-control" placeholder="10 Digits" required>
+              </div>
+            </div>
             <div class="mb-3">
-              <label class="text-uppercase text-muted font-weight-bold" style="font-size:0.7rem;">Inquiry Type *</label>
-              <select id="con-type" class="form-control" required>
-                <option value="">— Select —</option>
-                <option>Media & Press</option>
-                <option>Research Collaboration</option>
-                <option>Launch Services</option>
-                <option>General Inquiry</option>
-              </select>
+              <label class="small text-muted font-weight-bold">Message *</label>
+              <textarea id="con-msg" class="form-control" rows="3" placeholder="How can we help you?" required></textarea>
             </div>
-            <div class="mb-3"><label class="text-uppercase text-muted font-weight-bold" style="font-size:0.7rem;">Message *</label><textarea id="con-msg" class="form-control" rows="3" placeholder="Describe your inquiry..." required></textarea></div>
-            <div id="contact-success" class="d-none p-3 mb-3 border rounded text-success small" style="background:rgba(34,197,94,0.1); border-color:rgba(34,197,94,0.3);">
-              Message sent! Our team will respond within 3 business days.
+            <div id="contact-success" class="d-none p-3 mb-3 border rounded text-success small" style="border-color: green;">
+              Message sent successfully! Our team will respond shortly.
             </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="submit" class="btn btn-primary px-4 py-2">Send Message</button>
           </form>
         </div>
       </div>
-
-      <!-- Direct Contacts & Facilities -->
-      <div class="col-lg-4 offset-lg-1">
-        <h3 class="h5 font-weight-bold text-white mb-4">Direct Contacts</h3>
-        <div class="mb-3">
-          <div class="text-uppercase font-weight-bold" style="font-size:0.7rem; color:var(--accent);">General Inquiries</div>
-          <div class="text-muted small">contact@polaris.space.in · +91 80 1234 5678</div>
+      <div class="col-lg-5">
+        <div class="facility-card h-100 mb-0">
+          <h3 class="h5 font-weight-bold text-white mb-3">Direct Channels</h3>
+          <p class="small text-muted mb-2"><strong class="text-white">General Inquiries:</strong><br>contact@polaris.space.in · +91 80 1234 5678</p>
+          <p class="small text-muted mb-3"><strong class="text-white">Press & Media:</strong><br>press@polaris.space.in · +91 80 1234 5680</p>
+          <hr style="border-color: gray;">
+          <h3 class="h6 font-weight-bold text-white mb-1">Headquarters</h3>
+          <p class="small text-muted mb-0">Polaris Aerospace Park, Whitefield, Bengaluru 560066, India</p>
         </div>
-        <div class="mb-3">
-          <div class="text-uppercase font-weight-bold" style="font-size:0.7rem; color:var(--accent);">Media & Press</div>
-          <div class="text-muted small">press@polaris.space.in · +91 80 1234 5680</div>
-        </div>
-        <div class="mb-3">
-          <div class="text-uppercase font-weight-bold" style="font-size:0.7rem; color:var(--accent);">Launch Services</div>
-          <div class="text-muted small">launches@polaris.space.in · +91 80 1234 5682</div>
-        </div>
-        <hr style="border-color:var(--border); margin:1.5rem 0;">
-        <div class="text-uppercase font-weight-bold" style="font-size:0.7rem; color:var(--accent);">Headquarters</div>
-        <div class="text-muted small">Polaris Aerospace Park, Whitefield, Bengaluru 560066, India</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
-<footer class="footer-polaris py-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 mb-4 mb-md-0">
-        <div class="font-weight-bold text-white h5 mb-2">POLARIS</div>
-        <p class="text-muted small" style="line-height:1.7;">India's frontier space agency advancing launch technology, planetary exploration, and deep-space astronomy.</p>
-      </div>
-      <div class="col-md-2 offset-md-1 mb-4 mb-md-0">
-        <h6 class="text-white">Explore</h6>
-        <ul class="list-unstyled small">
-          <li><a href="about.html" class="text-muted">About Us</a></li>
-          <li><a href="missions.html" class="text-muted">Missions</a></li>
-          <li><a href="research.html" class="text-muted">Research</a></li>
-          <li><a href="gallery.html" class="text-muted">Gallery</a></li>
-          <li><a href="careers.html" class="text-muted">Careers</a></li>
-        </ul>
-      </div>
-      <div class="col-md-2 mb-4 mb-md-0">
-        <h6 class="text-white">Account</h6>
-        <ul class="list-unstyled small">
-          <li><a href="register.html" class="text-muted">Sign Up</a></li>
-          <li><a href="login.html" class="text-muted">Log In</a></li>
-          <li><a href="contact.html" class="text-muted">Contact</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <h6 class="text-white">Headquarters</h6>
-        <p class="text-muted small" style="line-height:1.7;">Polaris Aerospace Park<br>Whitefield, Bengaluru 560066, India</p>
-      </div>
-    </div>
-    <div class="d-flex justify-content-between flex-wrap pt-3 mt-4 border-top small text-muted" style="border-color:var(--border)!important;">
-      <span>&copy; 2026 Polaris Space Agency. All rights reserved.</span>
-    </div>
+<footer class="footer-polaris text-center">
+  <div class="container small text-muted">
+    <p class="font-weight-bold text-white mb-1">POLARIS SPACE AGENCY</p>
+    <p class="mb-0">&copy; 2026 Polaris Space Agency. All rights reserved.</p>
   </div>
 </footer>
 
-<!-- JavaScript Dependencies -->
 <script src="bootstrap4.2.1/jquery-3.7.1.min.js"></script>
 <script src="bootstrap4.2.1/bootstrap4.2.1/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/main.js"></script>

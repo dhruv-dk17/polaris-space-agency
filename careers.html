@@ -4,27 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Careers — Polaris Space Agency</title>
-  <meta name="description" content="Join Polaris Space Agency — engineering, planetary science, and operations careers in Bengaluru and Sriharikota.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="bootstrap4.2.1/bootstrap4.2.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<!-- Navigation Header -->
-<nav class="navbar navbar-expand-lg navbar-dark navbar-polaris">
+<nav class="navbar navbar-expand-lg navbar-dark navbar-polaris sticky-top">
   <div class="container">
-    <a class="navbar-brand font-weight-bold" href="index.html">
-      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" class="mr-2" style="vertical-align:middle;">
-        <ellipse cx="16" cy="16" rx="14" ry="5" stroke="var(--accent)" stroke-width="1.5" transform="rotate(-25 16 16)" stroke-dasharray="3 3"/>
-        <path d="M16 4 L18.5 12.5 L27 15 L18.5 17.5 L16 26 L13.5 17.5 L5 15 L13.5 12.5 Z" fill="var(--accent)"/>
-        <circle cx="16" cy="16" r="2.5" fill="#fff"/>
-      </svg>
-      POLARIS
-    </a>
-    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <a class="navbar-brand font-weight-bold" href="index.html">POLARIS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ml-auto align-items-lg-center">
+      <ul class="navbar-nav ml-auto align-items-center">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="missions.html">Missions</a></li>
@@ -32,177 +22,85 @@
         <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
         <li class="nav-item active"><a class="nav-link" href="careers.html">Careers</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        <li class="nav-item ml-lg-3"><a class="btn btn-outline-light btn-sm px-3" href="login.html">Log In</a></li>
-        <li class="nav-item ml-lg-2"><a class="btn btn-primary btn-sm px-3" href="register.html">Sign Up</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Page Banner -->
-<div class="page-banner py-5 border-bottom" style="border-color:var(--border)!important;">
+<div class="py-4 border-bottom" style="border-color: gray;">
   <div class="container">
-    <span class="text-uppercase font-weight-bold" style="font-size:0.72rem; color:var(--accent); letter-spacing:0.1em;">Join the Mission</span>
-    <h1 class="h2 font-weight-bold text-white mt-1">Work on Problems That Matter for Humanity</h1>
-    <p class="text-muted mb-0">Polaris is hiring across engineering, science, and operations to take India to the next frontier.</p>
+    <h1 class="h3 font-weight-bold text-white mb-1">Careers at Polaris</h1>
+    <p class="text-muted mb-0">Join our engineering and research teams in Bengaluru and Sriharikota.</p>
   </div>
 </div>
 
-<!-- Why Join Polaris & Benefits Grid -->
 <section class="py-5">
   <div class="container">
     <div class="row">
-      <div class="col-lg-5 mb-4 mb-lg-0">
-        <span class="text-uppercase font-weight-bold" style="font-size:0.72rem; color:var(--accent); letter-spacing:0.1em;">Why Polaris</span>
-        <h2 class="h3 font-weight-bold text-white mt-1">Real Mission. Real Impact.</h2>
-        <p class="text-muted mt-3" style="line-height:1.7;">Build rockets that launch real satellites, design rovers traversing planetary terrain, and analyze deep space data.</p>
+      <div class="col-lg-5 mb-4">
+        <h2 class="h4 font-weight-bold text-white mb-3">Open Positions</h2>
+        <div class="job-card">
+          <span class="text-uppercase small font-weight-bold" style="color: goldenrod;">Engineering</span>
+          <h4 class="h5 font-weight-bold text-white mt-1">Senior Propulsion Engineer</h4>
+          <p class="small text-muted mb-0">Bengaluru · Cryogenic LOX/LH2 Stage Development</p>
+        </div>
+        <div class="job-card">
+          <span class="text-uppercase small font-weight-bold" style="color: goldenrod;">Software</span>
+          <h4 class="h5 font-weight-bold text-white mt-1">Flight Software Engineer</h4>
+          <p class="small text-muted mb-0">Bengaluru · Real-time Guidance & Telemetry</p>
+        </div>
       </div>
-      <div class="col-lg-6 offset-lg-1">
-        <div class="row">
-          <div class="col-6 mb-3">
-            <div class="facility-card p-3 rounded h-100">
-              <span class="text-uppercase font-weight-bold" style="font-size:0.68rem; color:var(--accent);">Compensation</span>
-              <h5 class="h6 font-weight-bold text-white mt-1">Market-Leading Pay</h5>
-              <p class="text-muted small mb-0">Competitive salaries benchmarked annually.</p>
+      
+      <div class="col-lg-7">
+        <div class="calc-widget">
+          <h2 class="h4 font-weight-bold text-white mb-3">Submit Application</h2>
+          <form id="career-apply-form" novalidate>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label class="small text-muted font-weight-bold">First Name *</label>
+                <input type="text" id="apply-fname" class="form-control" placeholder="First Name" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="small text-muted font-weight-bold">Last Name *</label>
+                <input type="text" id="apply-lname" class="form-control" placeholder="Last Name" required>
+              </div>
             </div>
-          </div>
-          <div class="col-6 mb-3">
-            <div class="facility-card p-3 rounded h-100">
-              <span class="text-uppercase font-weight-bold" style="font-size:0.68rem; color:var(--accent);">Growth</span>
-              <h5 class="h6 font-weight-bold text-white mt-1">Deep Learning</h5>
-              <p class="text-muted small mb-0">Annual conference grants and research labs.</p>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label class="small text-muted font-weight-bold">Email Address *</label>
+                <input type="email" id="apply-email" class="form-control" placeholder="name@example.com" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="small text-muted font-weight-bold">Contact Number *</label>
+                <input type="text" id="apply-phone" class="form-control" placeholder="10 Digits" required>
+              </div>
             </div>
-          </div>
-          <div class="col-6 mb-3">
-            <div class="facility-card p-3 rounded h-100">
-              <span class="text-uppercase font-weight-bold" style="font-size:0.68rem; color:var(--accent);">Wellness</span>
-              <h5 class="h6 font-weight-bold text-white mt-1">Full Health Cover</h5>
-              <p class="text-muted small mb-0">Medical, dental, and family vision coverage.</p>
+            <div class="mb-3">
+              <label class="small text-muted font-weight-bold">Position *</label>
+              <select id="apply-role" class="form-control" required>
+                <option value="">— Select a Role —</option>
+                <option>Senior Propulsion Engineer</option>
+                <option>Flight Software Engineer</option>
+              </select>
             </div>
-          </div>
-          <div class="col-6 mb-3">
-            <div class="facility-card p-3 rounded h-100">
-              <span class="text-uppercase font-weight-bold" style="font-size:0.68rem; color:var(--accent);">Flexibility</span>
-              <h5 class="h6 font-weight-bold text-white mt-1">Hybrid Work</h5>
-              <p class="text-muted small mb-0">Flexible hours for non-lab disciplines.</p>
+            <div id="career-success" class="d-none p-3 mb-3 border rounded text-success small" style="border-color: green;">
+              Application submitted successfully! Our recruitment team will be in touch.
             </div>
-          </div>
+            <button type="submit" class="btn btn-primary px-4 py-2">Submit Application</button>
+          </form>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Open Positions List -->
-<section class="py-5" style="background:var(--dark-2);">
-  <div class="container">
-    <span class="text-uppercase font-weight-bold" style="font-size:0.72rem; color:var(--accent); letter-spacing:0.1em;">Open Positions</span>
-    <h2 class="h3 font-weight-bold text-white mb-4">Current Opportunities</h2>
-    <div class="rounded overflow-hidden" style="border:1px solid var(--border);">
-      <!-- Job 1 -->
-      <div class="job-card p-4 d-flex justify-content-between align-items-center flex-wrap" data-toggle="modal" data-target="#job-modal">
-        <div><h4 class="job-title h6 font-weight-bold text-white mb-1">Senior Propulsion Engineer</h4><div class="text-muted small text-uppercase">Engineering · Bengaluru · Full-time</div></div>
-        <span class="btn btn-outline-light btn-sm px-3 mt-2 mt-sm-0">Apply</span>
-      </div>
-      <!-- Job 2 -->
-      <div class="job-card p-4 d-flex justify-content-between align-items-center flex-wrap border-top" style="border-color:var(--border)!important;" data-toggle="modal" data-target="#job-modal">
-        <div><h4 class="job-title h6 font-weight-bold text-white mb-1">Mission Operations Analyst</h4><div class="text-muted small text-uppercase">Operations · Sriharikota · Full-time</div></div>
-        <span class="btn btn-outline-light btn-sm px-3 mt-2 mt-sm-0">Apply</span>
-      </div>
-      <!-- Job 3 -->
-      <div class="job-card p-4 d-flex justify-content-between align-items-center flex-wrap border-top" style="border-color:var(--border)!important;" data-toggle="modal" data-target="#job-modal">
-        <div><h4 class="job-title h6 font-weight-bold text-white mb-1">Planetary Scientist — Mars Program</h4><div class="text-muted small text-uppercase">Research · Bengaluru · Full-time</div></div>
-        <span class="btn btn-outline-light btn-sm px-3 mt-2 mt-sm-0">Apply</span>
-      </div>
-      <!-- Job 4 -->
-      <div class="job-card p-4 d-flex justify-content-between align-items-center flex-wrap border-top" style="border-color:var(--border)!important;" data-toggle="modal" data-target="#job-modal">
-        <div><h4 class="job-title h6 font-weight-bold text-white mb-1">Robotics Software Engineer</h4><div class="text-muted small text-uppercase">Engineering · Bengaluru · Full-time</div></div>
-        <span class="btn btn-outline-light btn-sm px-3 mt-2 mt-sm-0">Apply</span>
-      </div>
-      <!-- Job 5 -->
-      <div class="job-card p-4 d-flex justify-content-between align-items-center flex-wrap border-top" style="border-color:var(--border)!important;" data-toggle="modal" data-target="#job-modal">
-        <div><h4 class="job-title h6 font-weight-bold text-white mb-1">Astrophysics Research Associate</h4><div class="text-muted small text-uppercase">Research · Hanle Observatory · Full-time</div></div>
-        <span class="btn btn-outline-light btn-sm px-3 mt-2 mt-sm-0">Apply</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Dynamic Job Application Modal -->
-<div class="modal fade" id="job-modal" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header px-4 py-3" style="border-bottom:1px solid var(--border);">
-        <h5 class="modal-title font-weight-bold text-white">Apply to Polaris</h5>
-        <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
-      </div>
-      <div class="modal-body p-4">
-        <form id="career-apply-form" novalidate>
-          <div class="row">
-            <div class="col-md-6 mb-3"><label class="text-uppercase text-muted font-weight-bold" style="font-size:0.7rem;">First Name *</label><input type="text" id="apply-fname" class="form-control" required></div>
-            <div class="col-md-6 mb-3"><label class="text-uppercase text-muted font-weight-bold" style="font-size:0.7rem;">Last Name *</label><input type="text" id="apply-lname" class="form-control" required></div>
-          </div>
-          <div class="mb-3"><label class="text-uppercase text-muted font-weight-bold" style="font-size:0.7rem;">Email Address *</label><input type="email" id="apply-email" class="form-control" required></div>
-          <div class="mb-3">
-            <label class="text-uppercase text-muted font-weight-bold" style="font-size:0.7rem;">Position *</label>
-            <select id="apply-role" class="form-control" required>
-              <option value="">— Select a position —</option>
-              <option>Senior Propulsion Engineer</option>
-              <option>Mission Operations Analyst</option>
-              <option>Planetary Scientist — Mars Program</option>
-              <option>Robotics Software Engineer</option>
-              <option>Astrophysics Research Associate</option>
-            </select>
-          </div>
-          <div class="mb-3"><label class="text-uppercase text-muted font-weight-bold" style="font-size:0.7rem;">Cover Letter *</label><textarea id="apply-cover" class="form-control" rows="3" placeholder="Tell us why you want to join..." required></textarea></div>
-          <div id="career-success" class="d-none p-3 mb-3 border rounded text-success small" style="background:rgba(34,197,94,0.1); border-color:rgba(34,197,94,0.3);">
-            Application submitted! We will review and respond within 10 business days.
-          </div>
-          <button type="submit" class="btn btn-primary">Submit Application</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Footer -->
-<footer class="footer-polaris py-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 mb-4 mb-md-0">
-        <div class="font-weight-bold text-white h5 mb-2">POLARIS</div>
-        <p class="text-muted small" style="line-height:1.7;">India's frontier space agency advancing launch technology, planetary exploration, and deep-space astronomy.</p>
-      </div>
-      <div class="col-md-2 offset-md-1 mb-4 mb-md-0">
-        <h6 class="text-white">Explore</h6>
-        <ul class="list-unstyled small">
-          <li><a href="about.html" class="text-muted">About Us</a></li>
-          <li><a href="missions.html" class="text-muted">Missions</a></li>
-          <li><a href="research.html" class="text-muted">Research</a></li>
-          <li><a href="gallery.html" class="text-muted">Gallery</a></li>
-          <li><a href="careers.html" class="text-muted">Careers</a></li>
-        </ul>
-      </div>
-      <div class="col-md-2 mb-4 mb-md-0">
-        <h6 class="text-white">Account</h6>
-        <ul class="list-unstyled small">
-          <li><a href="register.html" class="text-muted">Sign Up</a></li>
-          <li><a href="login.html" class="text-muted">Log In</a></li>
-          <li><a href="contact.html" class="text-muted">Contact</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <h6 class="text-white">Headquarters</h6>
-        <p class="text-muted small" style="line-height:1.7;">Polaris Aerospace Park<br>Whitefield, Bengaluru 560066, India</p>
-      </div>
-    </div>
-    <div class="d-flex justify-content-between flex-wrap pt-3 mt-4 border-top small text-muted" style="border-color:var(--border)!important;">
-      <span>&copy; 2026 Polaris Space Agency. All rights reserved.</span>
-    </div>
+<footer class="footer-polaris text-center">
+  <div class="container small text-muted">
+    <p class="font-weight-bold text-white mb-1">POLARIS SPACE AGENCY</p>
+    <p class="mb-0">&copy; 2026 Polaris Space Agency. All rights reserved.</p>
   </div>
 </footer>
 
-<!-- JavaScript Dependencies -->
 <script src="bootstrap4.2.1/jquery-3.7.1.min.js"></script>
 <script src="bootstrap4.2.1/bootstrap4.2.1/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/main.js"></script>

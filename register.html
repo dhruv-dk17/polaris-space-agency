@@ -4,26 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Create Account — Polaris Space Agency</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="bootstrap4.2.1/bootstrap4.2.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<!-- Navigation Header -->
-<nav class="navbar navbar-expand-lg navbar-dark navbar-polaris">
+<nav class="navbar navbar-expand-lg navbar-dark navbar-polaris sticky-top">
   <div class="container">
-    <a class="navbar-brand font-weight-bold" href="index.html">
-      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" class="mr-2" style="vertical-align:middle;">
-        <ellipse cx="16" cy="16" rx="14" ry="5" stroke="var(--accent)" stroke-width="1.5" transform="rotate(-25 16 16)" stroke-dasharray="3 3"/>
-        <path d="M16 4 L18.5 12.5 L27 15 L18.5 17.5 L16 26 L13.5 17.5 L5 15 L13.5 12.5 Z" fill="var(--accent)"/>
-        <circle cx="16" cy="16" r="2.5" fill="#fff"/>
-      </svg>
-      POLARIS
-    </a>
-    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <a class="navbar-brand font-weight-bold" href="index.html">POLARIS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ml-auto align-items-lg-center">
+      <ul class="navbar-nav ml-auto align-items-center">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="missions.html">Missions</a></li>
@@ -31,62 +22,61 @@
         <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
         <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        <li class="nav-item ml-lg-3"><a class="btn btn-outline-light btn-sm px-3" href="login.html">Log In</a></li>
-        <li class="nav-item ml-lg-2 active"><a class="btn btn-primary btn-sm px-3" href="register.html">Sign Up</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Registration Container -->
 <div class="container py-5">
   <div class="row justify-content-center">
     <div class="col-md-8 col-lg-6">
-      <div class="calc-widget p-4 p-md-5 rounded">
-        <h1 class="h3 font-weight-bold text-white mb-1">Create an Account</h1>
-        <p class="text-muted small mb-4">Access telemetry, research papers, and launch notifications.</p>
-
-        <!-- Sign Up Form -->
+      <div class="calc-widget p-4">
+        <h1 class="h4 font-weight-bold text-white mb-3 text-center">Create an Account</h1>
         <form id="register-form" novalidate>
-          <div class="row">
-            <div class="col-sm-6 mb-3"><label class="text-uppercase text-muted font-weight-bold" style="font-size:0.7rem;">First Name *</label><input type="text" id="reg-fname" class="form-control" required></div>
-            <div class="col-sm-6 mb-3"><label class="text-uppercase text-muted font-weight-bold" style="font-size:0.7rem;">Last Name *</label><input type="text" id="reg-lname" class="form-control" required></div>
-          </div>
-          <div class="mb-3"><label class="text-uppercase text-muted font-weight-bold" style="font-size:0.7rem;">Email Address *</label><input type="email" id="reg-email" class="form-control" required></div>
-          
-          <!-- Password Input & Strength Meter -->
-          <div class="mb-3">
-            <label class="text-uppercase text-muted font-weight-bold" style="font-size:0.7rem;">Password *</label>
-            <input type="password" id="reg-password" class="form-control" required minlength="8">
-            <div class="strength-bar-wrap mt-2 rounded"><div id="strength-bar" class="strength-bar"></div></div>
-            <div id="strength-label" class="small mt-1 text-muted"></div>
+          <div class="form-row">
+            <div class="col-sm-6 mb-3">
+              <label class="small text-muted font-weight-bold">First Name *</label>
+              <input type="text" id="reg-fname" class="form-control" placeholder="First Name" required>
+            </div>
+            <div class="col-sm-6 mb-3">
+              <label class="small text-muted font-weight-bold">Last Name *</label>
+              <input type="text" id="reg-lname" class="form-control" placeholder="Last Name" required>
+            </div>
           </div>
           <div class="mb-3">
-            <label class="text-uppercase text-muted font-weight-bold" style="font-size:0.7rem;">Confirm Password *</label>
-            <input type="password" id="reg-confirm" class="form-control" required>
-            <div class="invalid-feedback">Passwords must match.</div>
+            <label class="small text-muted font-weight-bold">Email Address *</label>
+            <input type="email" id="reg-email" class="form-control" placeholder="name@example.com" required>
           </div>
-          <div class="mb-3 d-flex align-items-center">
-            <input type="checkbox" id="reg-terms" class="mr-2" required>
-            <label for="reg-terms" class="text-muted small mb-0">I accept terms and research policies.</label>
+          <div class="form-row">
+            <div class="col-sm-6 mb-3">
+              <label class="small text-muted font-weight-bold">Password *</label>
+              <input type="password" id="reg-password" class="form-control" placeholder="••••••••" required minlength="8">
+            </div>
+            <div class="col-sm-6 mb-3">
+              <label class="small text-muted font-weight-bold">Confirm Password *</label>
+              <input type="password" id="reg-confirm" class="form-control" placeholder="••••••••" required>
+            </div>
           </div>
-          
-          <!-- Status Messages -->
-          <div id="reg-success" class="d-none p-3 mb-3 border rounded text-success small" style="background:rgba(34,197,94,0.1); border-color:rgba(34,197,94,0.3);">
-            Account created! Please check your inbox.
+          <div id="reg-success" class="d-none p-3 mb-3 border rounded text-success small" style="border-color: green;">
+            Account created successfully!
           </div>
           <button type="submit" class="btn btn-primary w-100 py-2">Create Account</button>
         </form>
-
-        <div class="text-center mt-4 text-muted small">
-          Already have an account? <a href="login.html" style="color:var(--accent); font-weight:600;">Sign in</a>
+        <div class="text-center mt-3 text-muted small">
+          Already have an account? <a href="login.html">Sign in</a>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- JavaScript Dependencies -->
+<footer class="footer-polaris text-center">
+  <div class="container small text-muted">
+    <p class="font-weight-bold text-white mb-1">POLARIS SPACE AGENCY</p>
+    <p class="mb-0">&copy; 2026 Polaris Space Agency. All rights reserved.</p>
+  </div>
+</footer>
+
 <script src="bootstrap4.2.1/jquery-3.7.1.min.js"></script>
 <script src="bootstrap4.2.1/bootstrap4.2.1/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/main.js"></script>

@@ -4,25 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Missions — Polaris Space Agency</title>
-  <meta name="description" content="Browse all Polaris missions — lunar rovers, Mars landers, Jupiter orbiters, and satellite launches.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="bootstrap4.2.1/bootstrap4.2.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<!-- Navigation Header -->
-<nav class="navbar navbar-expand-lg navbar-dark navbar-polaris">
+<nav class="navbar navbar-expand-lg navbar-dark navbar-polaris sticky-top">
   <div class="container">
-    <a class="navbar-brand font-weight-bold" href="index.html">
-      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" class="mr-2" style="vertical-align:middle;">
-        <ellipse cx="16" cy="16" rx="14" ry="5" stroke="var(--accent)" stroke-width="1.5" transform="rotate(-25 16 16)" stroke-dasharray="3 3"/>
-        <path d="M16 4 L18.5 12.5 L27 15 L18.5 17.5 L16 26 L13.5 17.5 L5 15 L13.5 12.5 Z" fill="var(--accent)"/>
-        <circle cx="16" cy="16" r="2.5" fill="#fff"/>
-      </svg>
-      POLARIS
-    </a>
-    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <a class="navbar-brand font-weight-bold" href="index.html">POLARIS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="nav">
       <ul class="navbar-nav ml-auto align-items-lg-center">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -32,149 +22,56 @@
         <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
         <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        <li class="nav-item ml-lg-3"><a class="btn btn-outline-light btn-sm px-3" href="login.html">Log In</a></li>
-        <li class="nav-item ml-lg-2"><a class="btn btn-primary btn-sm px-3" href="register.html">Sign Up</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Page Banner -->
-<div class="page-banner py-5 border-bottom" style="border-color:var(--border)!important;">
+<div class="py-4 border-bottom" style="border-color: gray;">
   <div class="container">
-    <span class="text-uppercase font-weight-bold" style="font-size:0.72rem; color:var(--accent); letter-spacing:0.1em;">Missions Registry</span>
-    <h1 class="h2 font-weight-bold text-white mt-1">Every Mission. Every Frontier.</h1>
-    <p class="text-muted mb-0">From lunar south pole surveys to Jupiter atmospheric probes — exploring the solar system from Indian soil.</p>
+    <h1 class="h3 font-weight-bold text-white mb-1">Active Missions</h1>
+    <p class="text-muted mb-0">Exploring planetary bodies and deep-space corridors from Indian soil.</p>
   </div>
 </div>
 
-<!-- Interactive Mission Filter & Grid -->
 <section class="py-5">
   <div class="container">
-    <!-- Category Filter Controls -->
-    <div class="d-flex flex-wrap mb-4" id="filter-bar" style="gap:0.5rem;">
-      <button class="mission-filter-btn active mr-2 mb-2" data-filter="all">All Missions</button>
-      <button class="mission-filter-btn mr-2 mb-2" data-filter="moon">Lunar</button>
-      <button class="mission-filter-btn mr-2 mb-2" data-filter="mars">Mars</button>
-      <button class="mission-filter-btn mr-2 mb-2" data-filter="jupiter">Deep Space</button>
-      <button class="mission-filter-btn mb-2" data-filter="satellite">Satellite</button>
-    </div>
-
-    <!-- Cards Grid -->
-    <div class="row" id="missions-grid">
-      <!-- Lunar Mission 1 -->
-      <div class="col-md-6 col-lg-4 mb-4 mission-item" data-category="moon">
-        <a href="#" class="news-card d-block h-100">
-          <div class="news-card-img-wrap"><img src="assets/images/moon_rover.jpg" alt="LUNA-1" class="news-card-img"></div>
-          <div>
-            <span class="text-uppercase font-weight-bold" style="font-size:0.68rem; color:var(--accent); letter-spacing:0.08em;">Lunar · 2022</span>
-            <h3 class="h6 font-weight-bold text-white mt-1">LUNA-1 First Lunar Rover</h3>
-            <p class="text-muted small">Mapped geological strata and thermal cycles in permanent shadow regions of the lunar south pole.</p>
-          </div>
-        </a>
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="news-card h-100 mb-0">
+          <img src="assets/images/moon_rover.jpg" alt="Luna-1" class="news-card-img mb-3">
+          <span class="text-uppercase small font-weight-bold" style="color: goldenrod;">Lunar Program · 2022</span>
+          <h3 class="h5 font-weight-bold text-white mt-1">LUNA-1 Polar Rover</h3>
+          <p class="text-muted small mb-0">Mapped water ice signatures, surface regolith, and thermal cycles at the Moon's South Pole.</p>
+        </div>
       </div>
-
-      <!-- Lunar Mission 2 -->
-      <div class="col-md-6 col-lg-4 mb-4 mission-item" data-category="moon">
-        <a href="#" class="news-card d-block h-100">
-          <div class="news-card-img-wrap"><img src="assets/images/moon_rover.jpg" alt="LUNA-2" class="news-card-img"></div>
-          <div>
-            <span class="text-uppercase font-weight-bold" style="font-size:0.68rem; color:var(--accent); letter-spacing:0.08em;">Lunar · 2024</span>
-            <h3 class="h6 font-weight-bold text-white mt-1">LUNA-2 Water Ice Survey</h3>
-            <p class="text-muted small">Deep spectrometry at the south pole confirmed subsurface moisture traces in shadowed craters.</p>
-          </div>
-        </a>
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="news-card h-100 mb-0">
+          <img src="assets/images/mars_rover.jpg" alt="Ares-1" class="news-card-img mb-3">
+          <span class="text-uppercase small font-weight-bold" style="color: goldenrod;">Mars Program · 2025</span>
+          <h3 class="h5 font-weight-bold text-white mt-1">ARES-1 Explorer</h3>
+          <p class="text-muted small mb-0">Active robotic explorer gathering atmospheric dust, wind vortex readings, and seismic telemetry on Mars.</p>
+        </div>
       </div>
-
-      <!-- Mars Mission -->
-      <div class="col-md-6 col-lg-4 mb-4 mission-item" data-category="mars">
-        <a href="#" class="news-card d-block h-100">
-          <div class="news-card-img-wrap"><img src="assets/images/mars_rover.jpg" alt="ARES-1" class="news-card-img"></div>
-          <div>
-            <span class="text-uppercase font-weight-bold" style="font-size:0.68rem; color:var(--accent); letter-spacing:0.08em;">Mars · 2025</span>
-            <h3 class="h6 font-weight-bold text-white mt-1">ARES-1 Red Explorer</h3>
-            <p class="text-muted small">Active robotic rover tracking atmospheric dust storms and seismic vibrations across the equatorial plains.</p>
-          </div>
-        </a>
-      </div>
-
-      <!-- Jupiter Mission -->
-      <div class="col-md-6 col-lg-4 mb-4 mission-item" data-category="jupiter">
-        <a href="#" class="news-card d-block h-100">
-          <div class="news-card-img-wrap"><img src="assets/images/jupiter_orbiter.jpg" alt="ZEUS-1" class="news-card-img"></div>
-          <div>
-            <span class="text-uppercase font-weight-bold" style="font-size:0.68rem; color:var(--accent); letter-spacing:0.08em;">Deep Space · 2023</span>
-            <h3 class="h6 font-weight-bold text-white mt-1">ZEUS-1 Jupiter Orbiter</h3>
-            <p class="text-muted small">Inserted into Jovian orbit to analyze radiation belts and Great Red Spot cloud physics.</p>
-          </div>
-        </a>
-      </div>
-
-      <!-- Satellite 1 -->
-      <div class="col-md-6 col-lg-4 mb-4 mission-item" data-category="satellite">
-        <a href="#" class="news-card d-block h-100">
-          <div class="news-card-img-wrap"><img src="assets/images/satellite.jpg" alt="ASTRA-7" class="news-card-img"></div>
-          <div>
-            <span class="text-uppercase font-weight-bold" style="font-size:0.68rem; color:var(--accent); letter-spacing:0.08em;">Satellite · 2026</span>
-            <h3 class="h6 font-weight-bold text-white mt-1">ASTRA-7 Telecom Payload</h3>
-            <p class="text-muted small">High-bandwidth telecommunication satellite inserted into geostationary orbit using PSLV-Heavy.</p>
-          </div>
-        </a>
-      </div>
-
-      <!-- Satellite 2 -->
-      <div class="col-md-6 col-lg-4 mb-4 mission-item" data-category="satellite">
-        <a href="#" class="news-card d-block h-100">
-          <div class="news-card-img-wrap"><img src="assets/images/satellite.jpg" alt="NaviGlobe" class="news-card-img"></div>
-          <div>
-            <span class="text-uppercase font-weight-bold" style="font-size:0.68rem; color:var(--accent); letter-spacing:0.08em;">Satellite · 2026</span>
-            <h3 class="h6 font-weight-bold text-white mt-1">NaviGlobe GPS Payload</h3>
-            <p class="text-muted small">Medium Earth orbit satellite expanding India's regional positioning constellation network.</p>
-          </div>
-        </a>
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="news-card h-100 mb-0">
+          <img src="assets/images/jupiter_orbiter.jpg" alt="Zeus-1" class="news-card-img mb-3">
+          <span class="text-uppercase small font-weight-bold" style="color: goldenrod;">Deep Space · 2023</span>
+          <h3 class="h5 font-weight-bold text-white mt-1">ZEUS-1 Jupiter Probe</h3>
+          <p class="text-muted small mb-0">Scientific orbiter surveying Jovian radiation belts, plasma waves, and atmospheric cyclonic systems.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
-<footer class="footer-polaris py-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 mb-4 mb-md-0">
-        <div class="font-weight-bold text-white h5 mb-2">POLARIS</div>
-        <p class="text-muted small" style="line-height:1.7;">India's frontier space agency advancing launch technology, planetary exploration, and deep-space astronomy.</p>
-      </div>
-      <div class="col-md-2 offset-md-1 mb-4 mb-md-0">
-        <h6 class="text-white">Explore</h6>
-        <ul class="list-unstyled small">
-          <li><a href="about.html" class="text-muted">About Us</a></li>
-          <li><a href="missions.html" class="text-muted">Missions</a></li>
-          <li><a href="research.html" class="text-muted">Research</a></li>
-          <li><a href="gallery.html" class="text-muted">Gallery</a></li>
-          <li><a href="careers.html" class="text-muted">Careers</a></li>
-        </ul>
-      </div>
-      <div class="col-md-2 mb-4 mb-md-0">
-        <h6 class="text-white">Account</h6>
-        <ul class="list-unstyled small">
-          <li><a href="register.html" class="text-muted">Sign Up</a></li>
-          <li><a href="login.html" class="text-muted">Log In</a></li>
-          <li><a href="contact.html" class="text-muted">Contact</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <h6 class="text-white">Headquarters</h6>
-        <p class="text-muted small" style="line-height:1.7;">Polaris Aerospace Park<br>Whitefield, Bengaluru 560066, India</p>
-      </div>
-    </div>
-    <div class="d-flex justify-content-between flex-wrap pt-3 mt-4 border-top small text-muted" style="border-color:var(--border)!important;">
-      <span>&copy; 2026 Polaris Space Agency. All rights reserved.</span>
-    </div>
+<footer class="footer-polaris text-center">
+  <div class="container small text-muted">
+    <p class="font-weight-bold text-white mb-1">POLARIS SPACE AGENCY</p>
+    <p class="mb-0">&copy; 2026 Polaris Space Agency. All rights reserved.</p>
   </div>
 </footer>
 
-<!-- JavaScript Dependencies -->
 <script src="bootstrap4.2.1/jquery-3.7.1.min.js"></script>
 <script src="bootstrap4.2.1/bootstrap4.2.1/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/main.js"></script>

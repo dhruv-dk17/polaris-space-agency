@@ -3,26 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Polaris Space Agency — India's Gateway to the Cosmos</title>
-  <meta name="description" content="Polaris Space Agency — India's leading space exploration agency. Rocket launches, rovers, and deep-space research.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <title>Polaris Space Agency — Exploring the Stars</title>
   <link rel="stylesheet" href="bootstrap4.2.1/bootstrap4.2.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-<!-- Navigation Header -->
-<nav class="navbar navbar-expand-lg navbar-dark navbar-polaris">
+<nav class="navbar navbar-expand-lg navbar-dark navbar-polaris sticky-top">
   <div class="container">
-    <a class="navbar-brand font-weight-bold" href="index.html">
-      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" class="mr-2" style="vertical-align:middle;">
-        <ellipse cx="16" cy="16" rx="14" ry="5" stroke="var(--accent)" stroke-width="1.5" transform="rotate(-25 16 16)" stroke-dasharray="3 3"/>
-        <path d="M16 4 L18.5 12.5 L27 15 L18.5 17.5 L16 26 L13.5 17.5 L5 15 L13.5 12.5 Z" fill="var(--accent)"/>
-        <circle cx="16" cy="16" r="2.5" fill="#fff"/>
-      </svg>
-      POLARIS
-    </a>
-    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <a class="navbar-brand font-weight-bold" href="index.html">POLARIS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="nav">
       <ul class="navbar-nav ml-auto align-items-lg-center">
         <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
@@ -32,205 +21,122 @@
         <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
         <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        <li class="nav-item ml-lg-3"><a class="btn btn-outline-light btn-sm px-3" href="login.html">Log In</a></li>
-        <li class="nav-item ml-lg-2"><a class="btn btn-primary btn-sm px-3" href="register.html">Sign Up</a></li>
       </ul>
     </div>
   </div>
 </nav>
-
-<!-- Hero Section -->
-<section class="hero-section">
-  <img src="assets/images/hero_rocket.jpg" alt="Polaris rocket launch" class="hero-bg">
+<!-- 1. Hero Section -->
+<section class="hero-section text-center text-md-left">
+  <img src="assets/images/hero_rocket.jpg" alt="Space Rocket" class="hero-bg">
   <div class="hero-overlay"></div>
-  <div class="container hero-content">
+  <div class="container hero-content py-5">
     <div class="row">
       <div class="col-lg-8">
-        <span class="hero-eyebrow">Polaris Space Agency · India</span>
-        <h1 class="hero-title text-white">Reaching the Cosmos<br>from Indian Soil</h1>
-        <p class="text-white-50 lead mb-4">India's frontier space agency delivering satellites to orbit, deploying rovers across the Moon and Mars, and surveying deep-space horizons.</p>
-        <div>
-          <a href="missions.html" class="btn btn-primary mr-2 mb-2">Explore Missions</a>
-          <a href="about.html" class="btn btn-outline-light mb-2">Our Story</a>
+        <span class="small font-weight-bold text-uppercase" style="color: goldenrod; letter-spacing: 0.12em;">India's Space Agency</span>
+        <h1 class="hero-title text-white mt-2 mb-3">Exploring Space for Everyone</h1>
+        <p class="text-white lead mb-4">We build rockets, send rovers to the Moon and Mars, and study distant stars from Indian soil.</p>
+        <div class="d-flex flex-wrap justify-content-center justify-content-md-start">
+          <a href="missions.html" class="btn btn-primary mr-3 mb-2">Our Missions</a>
+          <a href="about.html" class="btn btn-outline-light mb-2">About Us</a>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- Launch Countdown Strip -->
-<div class="countdown-strip py-4">
+<!-- 2. Next Launch Banner -->
+<div class="py-5 text-center">
   <div class="container">
-    <div class="row align-items-center text-center text-md-left">
-      <div class="col-md-5 mb-4 mb-md-0">
-        <span class="text-uppercase font-weight-bold" style="font-size:0.72rem; color:var(--accent); letter-spacing:0.1em;">Next Launch Window</span>
-        <h4 class="text-white font-weight-bold h5 mb-1">PSLV-42 · Orbit Ingress</h4>
-        <p class="text-muted small mb-0">Sriharikota Launch Complex · Multi-spectral Payload</p>
+    <span class="small text-uppercase font-weight-bold" style="color: goldenrod; letter-spacing: 0.08em;">Upcoming Event</span>
+    <h3 class="h3 text-white font-weight-bold mt-2 mb-1">Next Rocket Launch: PSLV Rocket</h3>
+    <p class="text-muted mb-0">Date: November 15, 2026 · Launch Site: Sriharikota, India</p>
+  </div>
+</div>
+<!-- 3. What We Do (3 Pillars) -->
+<section class="py-4">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="small text-uppercase font-weight-bold" style="color: goldenrod;">What We Do</span>
+      <h2 class="h3 font-weight-bold text-white mt-1">Our Three Main Goals</h2>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4 mb-4">
+        <div class="facility-card h-100 mb-0 text-center">
+          <h4 class="h5 font-weight-bold text-white mb-2">1. Rocket Launches</h4>
+          <p class="small text-muted mb-0">Launching communication and weather satellites safely into Earth orbit.</p>
+        </div>
       </div>
-      <div class="col-md-7">
-        <div id="countdown-timer" class="d-flex justify-content-around text-center mx-auto" style="max-width:340px;">
-          <div class="px-2">
-            <div id="days" class="font-weight-bold h3 text-white mb-0">00</div>
-            <div class="text-uppercase text-muted" style="font-size:0.6rem;">Days</div>
-          </div>
-          <div class="px-2 border-left border-secondary">
-            <div id="hours" class="font-weight-bold h3 text-white mb-0">00</div>
-            <div class="text-uppercase text-muted" style="font-size:0.6rem;">Hours</div>
-          </div>
-          <div class="px-2 border-left border-secondary">
-            <div id="minutes" class="font-weight-bold h3 text-white mb-0">00</div>
-            <div class="text-uppercase text-muted" style="font-size:0.6rem;">Min</div>
-          </div>
-          <div class="px-2 border-left border-secondary">
-            <div id="seconds" class="font-weight-bold h3 text-white mb-0">00</div>
-            <div class="text-uppercase text-muted" style="font-size:0.6rem;">Sec</div>
-          </div>
+      <div class="col-12 col-md-4 mb-4">
+        <div class="facility-card h-100 mb-0 text-center">
+          <h4 class="h5 font-weight-bold text-white mb-2">2. Moon & Mars Rovers</h4>
+          <p class="small text-muted mb-0">Sending robotic explorers to search for water and understand new worlds.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 mb-4">
+        <div class="facility-card h-100 mb-0 text-center">
+          <h4 class="h5 font-weight-bold text-white mb-2">3. Space Telescopes</h4>
+          <p class="small text-muted mb-0">Watching stars, sun flares, and far-away galaxies from our mountain telescope.</p>
         </div>
       </div>
     </div>
   </div>
+</section>
+<!-- 4. Key Numbers / Stats -->
+<div class="stats-strip text-center my-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-md-3 mb-3 mb-md-0"><h3 class="font-weight-bold text-white mb-0" style="color: goldenrod !important;">54+</h3><p class="text-muted small mb-0">Satellites Launched</p></div>
+      <div class="col-6 col-md-3 mb-3 mb-md-0"><h3 class="font-weight-bold text-white mb-0" style="color: goldenrod !important;">2</h3><p class="text-muted small mb-0">Moon Rovers</p></div>
+      <div class="col-6 col-md-3"><h3 class="font-weight-bold text-white mb-0" style="color: goldenrod !important;">1</h3><p class="text-muted small mb-0">Mars Rover</p></div>
+      <div class="col-6 col-md-3"><h3 class="font-weight-bold text-white mb-0" style="color: goldenrod !important;">1</h3><p class="text-muted small mb-0">Mountain Telescope</p></div>
+    </div>
+  </div>
 </div>
-
-<!-- Latest Exploration Highlights -->
+<!-- 5. Active Missions Highlights -->
 <section class="py-5">
   <div class="container">
-    <div class="d-flex justify-content-between align-items-end mb-4 flex-wrap">
+    <div class="d-flex justify-content-between align-items-center mb-4">
       <div>
-        <span class="text-uppercase font-weight-bold" style="font-size:0.72rem; color:var(--accent); letter-spacing:0.1em;">Latest Missions</span>
-        <h2 class="h3 font-weight-bold text-white mb-0">What We're Exploring</h2>
+        <span class="small text-uppercase font-weight-bold" style="color: goldenrod;">Missions</span>
+        <h2 class="h3 font-weight-bold text-white mb-0">Current Space Missions</h2>
       </div>
-      <a href="missions.html" class="btn btn-outline-light btn-sm mt-2 mt-sm-0">View All Missions</a>
+      <a href="missions.html" class="small" style="color: goldenrod;">See All &rarr;</a>
     </div>
     <div class="row">
-      <!-- Featured Mission -->
-      <div class="col-lg-7 mb-4">
-        <a href="missions.html" class="news-card d-block h-100">
-          <div class="news-card-img-wrap">
-            <img src="assets/images/mars_rover.jpg" alt="Mars Rover" class="news-card-img" style="height:320px;">
-          </div>
-          <div>
-            <span class="text-uppercase font-weight-bold" style="font-size:0.68rem; color:var(--accent); letter-spacing:0.08em;">Mars Exploration</span>
-            <div class="news-card-title font-weight-bold h5 mt-1">ARES-1 Rover Captures Wind Vortex Data on Martian Surface</div>
-            <p class="text-muted small mt-2">India's first Mars lander continues daily atmospheric readings, tracking storm waves across equatorial plains.</p>
-          </div>
+      <div class="col-12 col-md-6 mb-4">
+        <a href="missions.html" class="news-card h-100">
+          <img src="assets/images/mars_rover.jpg" alt="Mars Rover" class="news-card-img mb-3">
+          <span class="small font-weight-bold text-uppercase" style="color: goldenrod;">Mars Mission</span>
+          <h3 class="h5 font-weight-bold text-white mt-1">Mars Rover</h3>
+          <p class="text-muted small mb-0">Our robotic car travels across Mars taking photos and studying soil and dust storms.</p>
         </a>
       </div>
-      <!-- Secondary Missions -->
-      <div class="col-lg-5">
-        <div class="row">
-          <div class="col-12 col-md-6 col-lg-12 mb-4">
-            <a href="missions.html" class="news-card d-block">
-              <div class="news-card-img-wrap">
-                <img src="assets/images/moon_rover.jpg" alt="Moon Rover" class="news-card-img" style="height:180px;">
-              </div>
-              <div>
-                <span class="text-uppercase font-weight-bold" style="font-size:0.68rem; color:var(--accent); letter-spacing:0.08em;">Lunar</span>
-                <div class="news-card-title font-weight-bold h6 mt-1">LUNA-2 Discovers Subsurface Moisture Traces at South Pole</div>
-              </div>
-            </a>
-          </div>
-          <div class="col-12 col-md-6 col-lg-12 mb-4">
-            <a href="missions.html" class="news-card d-block">
-              <div class="news-card-img-wrap">
-                <img src="assets/images/jupiter_orbiter.jpg" alt="Jupiter ZEUS-1" class="news-card-img" style="height:180px;">
-              </div>
-              <div>
-                <span class="text-uppercase font-weight-bold" style="font-size:0.68rem; color:var(--accent); letter-spacing:0.08em;">Deep Space</span>
-                <div class="news-card-title font-weight-bold h6 mt-1">ZEUS-1 Orbiter Enters Jovian Radiation Belt Study Phase</div>
-              </div>
-            </a>
-          </div>
-        </div>
+      <div class="col-12 col-md-6 mb-4">
+        <a href="missions.html" class="news-card h-100">
+          <img src="assets/images/moon_rover.jpg" alt="Moon Rover" class="news-card-img mb-3">
+          <span class="small font-weight-bold text-uppercase" style="color: goldenrod;">Moon Mission</span>
+          <h3 class="h5 font-weight-bold text-white mt-1">Moon Rover</h3>
+          <p class="text-muted small mb-0">Exploring the dark craters of the Moon's south pole to confirm underground ice water.</p>
+        </a>
       </div>
     </div>
   </div>
 </section>
-
-<!-- Key Statistics -->
-<div class="py-4 border-top border-bottom" style="background:var(--dark-2); border-color:var(--border)!important;">
+<!-- 6. Call to Action / Join Us -->
+<section class="py-5 text-center">
   <div class="container">
-    <div class="row text-center">
-      <div class="col-6 col-md-3 mb-3 mb-md-0"><div class="h2 font-weight-bold text-white mb-0">02</div><div class="text-muted small">Moon Rovers Deployed</div></div>
-      <div class="col-6 col-md-3 mb-3 mb-md-0"><div class="h2 font-weight-bold text-white mb-0">01</div><div class="text-muted small">Mars Lander Active</div></div>
-      <div class="col-6 col-md-3"><div class="h2 font-weight-bold text-white mb-0">01</div><div class="text-muted small">Jupiter Orbiter</div></div>
-      <div class="col-6 col-md-3"><div class="h2 font-weight-bold text-white mb-0">54+</div><div class="text-muted small">Satellites Launched</div></div>
-    </div>
-  </div>
-</div>
-
-<!-- Ladakh Deep Sky Observatory -->
-<section class="py-5">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6 mb-4 mb-lg-0">
-        <img src="assets/images/telescope.jpg" alt="Observatory" class="img-fluid rounded" style="border:1px solid var(--border);">
-      </div>
-      <div class="col-lg-5 offset-lg-1">
-        <span class="text-uppercase font-weight-bold" style="font-size:0.72rem; color:var(--accent); letter-spacing:0.1em;">Dark Sky Observatory · Hanle, Ladakh</span>
-        <h2 class="h3 font-weight-bold text-white mt-1">Scanning Nebulas from the Himalayas</h2>
-        <p class="text-muted mt-3" style="line-height:1.7;">Polaris operates a massive telescope in a dark sky village at 4,500m altitude in Ladakh. Free from light pollution, our astronomers study distant galaxies, nebulae, and stellar formation.</p>
-        <a href="research.html" class="btn btn-primary mt-3">View Research</a>
-      </div>
-    </div>
+    <h2 class="h3 font-weight-bold text-white mb-2">Want to Work with Us?</h2>
+    <p class="text-muted mb-4 mx-auto" style="max-width: 500px;">We are always looking for smart engineers, scientists, and thinkers to join our mission.</p>
+    <a href="careers.html" class="btn btn-primary mr-3">See Open Jobs</a>
+    <a href="contact.html" class="btn btn-outline-light">Contact Us</a>
   </div>
 </section>
-
-<!-- Interactive Cosmic Facts Explorer -->
-<section class="py-5 border-top" style="border-color:var(--border)!important; background:var(--dark-2);">
-  <div class="container text-center">
-    <span class="text-uppercase font-weight-bold" style="font-size:0.72rem; color:var(--accent); letter-spacing:0.1em;">Cosmic Feed</span>
-    <h2 class="h3 font-weight-bold text-white mb-4">Cosmic Facts Explorer</h2>
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="calc-widget p-4 rounded">
-          <p id="fact-text" class="text-white mb-3" style="font-size:1.1rem; min-height:60px; display:flex; align-items:center; justify-content:center; transition:opacity 0.2s;">
-            Neutron stars are so dense that a single teaspoon would weigh about 6 billion tons on Earth.
-          </p>
-          <button id="next-fact-btn" class="btn btn-primary">Next Cosmic Fact</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer-polaris py-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 mb-4 mb-md-0">
-        <div class="font-weight-bold text-white h5 mb-2">POLARIS</div>
-        <p class="text-muted small" style="line-height:1.7;">India's frontier space agency advancing launch technology, planetary exploration, and deep-space astronomy.</p>
-      </div>
-      <div class="col-md-2 offset-md-1 mb-4 mb-md-0">
-        <h6 class="text-white">Explore</h6>
-        <ul class="list-unstyled small">
-          <li><a href="about.html" class="text-muted">About Us</a></li>
-          <li><a href="missions.html" class="text-muted">Missions</a></li>
-          <li><a href="research.html" class="text-muted">Research</a></li>
-          <li><a href="gallery.html" class="text-muted">Gallery</a></li>
-          <li><a href="careers.html" class="text-muted">Careers</a></li>
-        </ul>
-      </div>
-      <div class="col-md-2 mb-4 mb-md-0">
-        <h6 class="text-white">Account</h6>
-        <ul class="list-unstyled small">
-          <li><a href="register.html" class="text-muted">Sign Up</a></li>
-          <li><a href="login.html" class="text-muted">Log In</a></li>
-          <li><a href="contact.html" class="text-muted">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <h6 class="text-white">Headquarters</h6>
-        <p class="text-muted small" style="line-height:1.7;">Polaris Aerospace Park<br>Whitefield, Bengaluru 560066, India</p>
-      </div>
-    </div>
-    <div class="d-flex justify-content-between flex-wrap pt-3 mt-4 border-top small text-muted" style="border-color:var(--border)!important;">
-      <span>&copy; 2026 Polaris Space Agency. All rights reserved.</span>
-    </div>
+<!-- 7. Footer -->
+<footer class="footer-polaris text-center">
+  <div class="container small text-muted">
+    <p class="font-weight-bold text-white mb-1">POLARIS SPACE AGENCY</p>
+    <p class="mb-0">&copy; 2026 Polaris Space Agency. Simple Space Exploration for All.</p>
   </div>
 </footer>
-
-<!-- JavaScript Dependencies -->
 <script src="bootstrap4.2.1/jquery-3.7.1.min.js"></script>
 <script src="bootstrap4.2.1/bootstrap4.2.1/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
