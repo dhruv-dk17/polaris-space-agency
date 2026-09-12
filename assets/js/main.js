@@ -1,89 +1,123 @@
-// Polaris Space Agency — main.js
-// Simplified validation logic for forms
+// Space Agency Website - main.js
 
-document.addEventListener('DOMContentLoaded', () => {
-  const forms = document.querySelectorAll('form');
+// This function checks the Create Account form
+function checkRegisterForm() {
+  // Get all the values that the user typed in
+  var firstName = document.getElementById("firstName").value;
+  var lastName = document.getElementById("lastName").value;
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  var confirmPassword = document.getElementById("confirmPassword").value;
+
+  // Check if first name or last name is empty
+  if (firstName.trim() == "" || lastName.trim() == "") {
+    alert("First name and Last name are required.");
+    return false; // Stop the form from submitting
+  }
+
+  // Find where the @ and . are in the email
+  var atPosition = email.indexOf("@");
+  var dotPosition = email.lastIndexOf(".");
   
-  forms.forEach(form => {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      let isValid = true;
-      
-      // Clear previous error messages
-      form.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
-      form.querySelectorAll('.error-msg').forEach(el => el.remove());
+  // Make sure the email has an @ and a . in the correct places
+  if (atPosition < 1 || (dotPosition - atPosition) < 2) {
+    alert("Please enter a valid email address.");
+    return false;
+  }
 
-      const showError = (input, message) => {
-        isValid = false;
-        input.classList.add('is-invalid');
-        const err = document.createElement('div');
-        err.className = 'invalid-feedback error-msg';
-        err.style.display = 'block';
-        err.textContent = message;
-        input.parentNode.appendChild(err);
-      };
+  // Password must be at least 8 characters long
+  if (password.length < 8) {
+    alert("Password must contain at least 8 characters.");
+    return false;
+  }
 
-      // 1. Name validation (alphabetic characters only)
-      const nameFields = form.querySelectorAll('[id*="fname"], [id*="lname"]');
-      nameFields.forEach(field => {
-        const val = field.value.trim();
-        if (!val) {
-          showError(field, 'Name is required.');
-        } else if (!/^[A-Za-z\s]+$/.test(val)) {
-          showError(field, 'Name must contain only alphabetic characters.');
-        }
-      });
+  // Make sure both passwords match
+  if (password != confirmPassword) {
+    alert("Password and Confirm Password must be same.");
+    return false;
+  }
 
-      // 2. Email validation (standard email check)
-      const emailFields = form.querySelectorAll('input[type="email"], [id*="email"]');
-      emailFields.forEach(field => {
-        const val = field.value.trim();
-        if (!val) {
-          showError(field, 'Email address is required.');
-        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
-          showError(field, 'Please enter a valid email address.');
-        }
-      });
+  // Ask the user if they are sure
+  var userChoice = confirm("Are you sure you want to create this account?");
+  if (userChoice == true) {
+    alert("Account created successfully!");
+    return true; // Submit the form
+  } else {
+    alert("Action cancelled.");
+    return false;
+  }
+}
 
-      // 3. Contact Number validation (exactly 10 digits)
-      const phoneFields = form.querySelectorAll('[id*="phone"]');
-      phoneFields.forEach(field => {
-        const val = field.value.trim();
-        if (!val) {
-          showError(field, 'Contact number is required.');
-        } else if (!/^\d{10}$/.test(val)) {
-          showError(field, 'Contact number must be exactly 10 digits.');
-        }
-      });
+// This function checks the Contact Us form
+function checkContactForm() {
+  // Get values from the contact form
+  var firstName = document.getElementById("firstName").value;
+  var email = document.getElementById("email").value;
+  var phone = document.getElementById("phone").value;
+  var message = document.getElementById("message").value;
 
-      // 4. Password validation (for registration match check)
-      const pass = form.querySelector('#reg-password');
-      const confirm = form.querySelector('#reg-confirm');
-      if (pass && confirm) {
-        if (!pass.value) {
-          showError(pass, 'Password is required.');
-        }
-        if (pass.value !== confirm.value) {
-          showError(confirm, 'Passwords do not match.');
-        }
-      }
+  // Check if first name is empty
+  if (firstName.trim() == "") {
+    alert("First Name is required.");
+    return false;
+  }
 
-      // 5. Generic required check for other fields
-      form.querySelectorAll('[required]').forEach(field => {
-        if (!field.value.trim() && !field.classList.contains('is-invalid')) {
-          showError(field, 'This field is required.');
-        }
-      });
+  // Check if email is valid
+  var atPosition = email.indexOf("@");
+  var dotPosition = email.lastIndexOf(".");
+  if (atPosition < 1 || (dotPosition - atPosition) < 2) {
+    alert("Please enter a valid email address.");
+    return false;
+  }
 
-      // Success feedback
-      if (isValid) {
-        const successMsg = form.querySelector('[id*="success"]');
-        if (successMsg) {
-          successMsg.classList.remove('d-none');
-          setTimeout(() => successMsg.classList.add('d-none'), 6000);
-        }
-        form.reset();
-      }
-    });
-  });
-});
+  // Phone number must be numbers only and exactly 10 digits
+  if (isNaN(phone) || phone.length != 10) {
+    alert("Contact number must be exactly 10 digits and only numbers.");
+    return false;
+  }
+
+  // Check if they typed a message
+  if (message.trim() == "") {
+    alert("Please enter your message.");
+    return false;
+  }
+
+  alert("Message sent successfully! Our team will respond shortly.");
+  return true;
+}
+
+// This function checks the Job Application form
+function checkJobForm() {
+  // Get values from the jobs form
+  var firstName = document.getElementById("firstName").value;
+  var email = document.getElementById("email").value;
+  var jobRole = document.getElementById("jobRole").value;
+
+  if (firstName.trim() == "") {
+    alert("First Name is required.");
+    return false;
+  }
+
+  // Check if email is valid
+  var atPosition = email.indexOf("@");
+  var dotPosition = email.lastIndexOf(".");
+  if (atPosition < 1 || (dotPosition - atPosition) < 2) {
+    alert("Please enter a valid email address.");
+    return false;
+  }
+
+  // Check if a job position was selected from the dropdown
+  if (jobRole == "") {
+    alert("Please select a position.");
+    return false;
+  }
+
+  // Ask if they are sure they want to apply for that specific job
+  var userChoice = confirm("Do you want to submit your application for " + jobRole + "?");
+  if (userChoice == true) {
+    alert("Application Submitted Successfully!");
+    return true;
+  } else {
+    return false;
+  }
+}

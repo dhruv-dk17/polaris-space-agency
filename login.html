@@ -1,52 +1,64 @@
+<!-- We are telling the browser this is an HTML document -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic page settings -->
   <meta charset="UTF-8">
+  <!-- This makes the website look good on mobile phones -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign In — Polaris Space Agency</title>
+  <title>Sign In — Space Website</title>
+  
+  <!-- Link to the Bootstrap CSS for ready-made designs -->
   <link rel="stylesheet" href="bootstrap4.2.1/bootstrap4.2.1/css/bootstrap.min.css">
+  <!-- Link to our own custom CSS file -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark navbar-polaris sticky-top">
+<!-- The top navigation menu bar -->
+<nav class="navbar navbar-expand-lg navbar-dark top-menu sticky-top">
   <div class="container">
-    <a class="navbar-brand font-weight-bold" href="index.html">POLARIS</a>
+    <a class="navbar-brand" href="index.html">SPACE WEBSITE</a>
+    <!-- The button that shows up on mobile phones to open the menu -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ml-auto align-items-center">
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="missions.html">Missions</a></li>
         <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
         <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+        <li class="nav-item"><a class="nav-link" href="careers.html">Jobs</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
+<!-- The main section holding the sign in form -->
 <div class="container py-5">
+  <!-- This row centers the form in the middle of the page -->
   <div class="row justify-content-center">
-    <div class="col-md-6 col-lg-5">
-      <div class="calc-widget p-4">
-        <h1 class="h4 font-weight-bold text-white mb-3 text-center">Sign In</h1>
-        <form id="login-form" novalidate>
-          <div class="mb-3">
-            <label class="small text-muted font-weight-bold">Email Address *</label>
-            <input type="email" id="login-email" class="form-control" placeholder="you@example.com" required>
+    <div class="col-md-8 col-lg-5">
+      <div class="form-box">
+        <h1 class="text-white text-center mb-4">Sign In</h1>
+        <form>
+          <!-- Input box for email address -->
+          <div class="form-group">
+            <label for="login-email" class="text-muted">Email Address</label>
+            <input type="email" id="login-email" class="form-control" placeholder="name@example.com">
           </div>
-          <div class="mb-3">
-            <label class="small text-muted font-weight-bold">Password *</label>
-            <input type="password" id="login-password" class="form-control" placeholder="••••••••" required>
+          <!-- Input box for password -->
+          <div class="form-group">
+            <label for="login-password" class="text-muted">Password</label>
+            <input type="password" id="login-password" class="form-control" placeholder="Password">
           </div>
-          <div id="login-success" class="d-none p-3 mb-3 border rounded text-success small" style="border-color: green;">
-            Sign-in successful!
-          </div>
+          <!-- The submit button -->
           <button type="submit" class="btn btn-primary w-100 py-2">Sign In</button>
         </form>
-        <div class="text-center mt-3 text-muted small">
+        
+        <!-- A link to go to the create account page -->
+        <div class="text-center mt-3 text-muted">
           Don't have an account? <a href="register.html">Create one</a>
         </div>
       </div>
@@ -54,13 +66,15 @@
   </div>
 </div>
 
-<footer class="footer-polaris text-center">
-  <div class="container small text-muted">
-    <p class="font-weight-bold text-white mb-1">POLARIS SPACE AGENCY</p>
-    <p class="mb-0">&copy; 2026 Polaris Space Agency. All rights reserved.</p>
+<!-- The footer at the very bottom of the page -->
+<footer class="bottom-footer text-center">
+  <div class="container">
+    <p class="text-white mb-1">SPACE WEBSITE PROJECT</p>
+    <p class="mb-0">&copy; 2026 Space Website. All rights reserved.</p>
   </div>
 </footer>
 
+<!-- JavaScript files needed for the website to work -->
 <script src="bootstrap4.2.1/jquery-3.7.1.min.js"></script>
 <script src="bootstrap4.2.1/bootstrap4.2.1/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/main.js"></script>

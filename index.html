@@ -1,142 +1,92 @@
+<!-- We are telling the browser this is an HTML document -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic page settings -->
   <meta charset="UTF-8">
+  <!-- This makes the website look good on mobile phones -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Polaris Space Agency — Exploring the Stars</title>
+  <title>Space Website</title>
+  
+  <!-- Link to the Bootstrap CSS for ready-made designs -->
   <link rel="stylesheet" href="bootstrap4.2.1/bootstrap4.2.1/css/bootstrap.min.css">
+  <!-- Link to our own custom CSS file -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark navbar-polaris sticky-top">
+
+<!-- The top navigation menu bar -->
+<nav class="navbar navbar-expand-lg navbar-dark top-menu sticky-top">
   <div class="container">
-    <a class="navbar-brand font-weight-bold" href="index.html">POLARIS</a>
+    <a class="navbar-brand" href="index.html">SPACE WEBSITE</a>
+    <!-- The button that shows up on mobile phones to open the menu -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ml-auto align-items-lg-center">
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="missions.html">Missions</a></li>
         <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
         <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+        <li class="nav-item"><a class="nav-link" href="careers.html">Jobs</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
-<!-- 1. Hero Section -->
-<section class="hero-section text-center text-md-left">
-  <img src="assets/images/hero_rocket.jpg" alt="Space Rocket" class="hero-bg">
-  <div class="hero-overlay"></div>
-  <div class="container hero-content py-5">
-    <div class="row">
-      <div class="col-lg-8">
-        <span class="small font-weight-bold text-uppercase" style="color: goldenrod; letter-spacing: 0.12em;">India's Space Agency</span>
-        <h1 class="hero-title text-white mt-2 mb-3">Exploring Space for Everyone</h1>
-        <p class="text-white lead mb-4">We build rockets, send rovers to the Moon and Mars, and study distant stars from Indian soil.</p>
-        <div class="d-flex flex-wrap justify-content-center justify-content-md-start">
-          <a href="missions.html" class="btn btn-primary mr-3 mb-2">Our Missions</a>
-          <a href="about.html" class="btn btn-outline-light mb-2">About Us</a>
-        </div>
-      </div>
-    </div>
+
+<!-- The big banner section at the top of the home page -->
+<header class="main-banner">
+  <!-- The background image for the banner -->
+  <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop" class="banner-image" alt="Space">
+  <div class="banner-color"></div>
+  <div class="container banner-text text-center text-white">
+    <h1 class="banner-title">Welcome to Space Website</h1>
+    <p class="lead mb-4">A simple project for learning HTML, CSS, and JavaScript.</p>
+    <!-- Buttons to go to other pages -->
+    <a href="about.html" class="btn btn-primary">Learn More</a>
+    <a href="contact.html" class="btn btn-outline-light ml-2">Contact Us</a>
   </div>
-</section>
-<!-- 2. Next Launch Banner -->
-<div class="py-5 text-center">
-  <div class="container">
-    <span class="small text-uppercase font-weight-bold" style="color: goldenrod; letter-spacing: 0.08em;">Upcoming Event</span>
-    <h3 class="h3 text-white font-weight-bold mt-2 mb-1">Next Rocket Launch: PSLV Rocket</h3>
-    <p class="text-muted mb-0">Date: November 15, 2026 · Launch Site: Sriharikota, India</p>
-  </div>
-</div>
-<!-- 3. What We Do (3 Pillars) -->
-<section class="py-4">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="small text-uppercase font-weight-bold" style="color: goldenrod;">What We Do</span>
-      <h2 class="h3 font-weight-bold text-white mt-1">Our Three Main Goals</h2>
-    </div>
-    <div class="row">
-      <div class="col-12 col-md-4 mb-4">
-        <div class="facility-card h-100 mb-0 text-center">
-          <h4 class="h5 font-weight-bold text-white mb-2">1. Rocket Launches</h4>
-          <p class="small text-muted mb-0">Launching communication and weather satellites safely into Earth orbit.</p>
-        </div>
-      </div>
-      <div class="col-12 col-md-4 mb-4">
-        <div class="facility-card h-100 mb-0 text-center">
-          <h4 class="h5 font-weight-bold text-white mb-2">2. Moon & Mars Rovers</h4>
-          <p class="small text-muted mb-0">Sending robotic explorers to search for water and understand new worlds.</p>
-        </div>
-      </div>
-      <div class="col-12 col-md-4 mb-4">
-        <div class="facility-card h-100 mb-0 text-center">
-          <h4 class="h5 font-weight-bold text-white mb-2">3. Space Telescopes</h4>
-          <p class="small text-muted mb-0">Watching stars, sun flares, and far-away galaxies from our mountain telescope.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- 4. Key Numbers / Stats -->
-<div class="stats-strip text-center my-4">
-  <div class="container">
-    <div class="row">
-      <div class="col-6 col-md-3 mb-3 mb-md-0"><h3 class="font-weight-bold text-white mb-0" style="color: goldenrod !important;">54+</h3><p class="text-muted small mb-0">Satellites Launched</p></div>
-      <div class="col-6 col-md-3 mb-3 mb-md-0"><h3 class="font-weight-bold text-white mb-0" style="color: goldenrod !important;">2</h3><p class="text-muted small mb-0">Moon Rovers</p></div>
-      <div class="col-6 col-md-3"><h3 class="font-weight-bold text-white mb-0" style="color: goldenrod !important;">1</h3><p class="text-muted small mb-0">Mars Rover</p></div>
-      <div class="col-6 col-md-3"><h3 class="font-weight-bold text-white mb-0" style="color: goldenrod !important;">1</h3><p class="text-muted small mb-0">Mountain Telescope</p></div>
-    </div>
-  </div>
-</div>
-<!-- 5. Active Missions Highlights -->
+</header>
+
+<!-- A section containing 3 information boxes -->
 <section class="py-5">
   <div class="container">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <div>
-        <span class="small text-uppercase font-weight-bold" style="color: goldenrod;">Missions</span>
-        <h2 class="h3 font-weight-bold text-white mb-0">Current Space Missions</h2>
-      </div>
-      <a href="missions.html" class="small" style="color: goldenrod;">See All &rarr;</a>
-    </div>
     <div class="row">
-      <div class="col-12 col-md-6 mb-4">
-        <a href="missions.html" class="news-card h-100">
-          <img src="assets/images/mars_rover.jpg" alt="Mars Rover" class="news-card-img mb-3">
-          <span class="small font-weight-bold text-uppercase" style="color: goldenrod;">Mars Mission</span>
-          <h3 class="h5 font-weight-bold text-white mt-1">Mars Rover</h3>
-          <p class="text-muted small mb-0">Our robotic car travels across Mars taking photos and studying soil and dust storms.</p>
+      <!-- Box 1: Missions -->
+      <div class="col-md-4">
+        <a href="missions.html" class="info-card">
+          <h4>Our Missions</h4>
+          <p class="text-muted">Learn about our space travel plans.</p>
         </a>
       </div>
-      <div class="col-12 col-md-6 mb-4">
-        <a href="missions.html" class="news-card h-100">
-          <img src="assets/images/moon_rover.jpg" alt="Moon Rover" class="news-card-img mb-3">
-          <span class="small font-weight-bold text-uppercase" style="color: goldenrod;">Moon Mission</span>
-          <h3 class="h5 font-weight-bold text-white mt-1">Moon Rover</h3>
-          <p class="text-muted small mb-0">Exploring the dark craters of the Moon's south pole to confirm underground ice water.</p>
+      <!-- Box 2: Research -->
+      <div class="col-md-4">
+        <a href="research.html" class="info-card">
+          <h4>Our Research</h4>
+          <p class="text-muted">Read about our science work.</p>
+        </a>
+      </div>
+      <!-- Box 3: Gallery -->
+      <div class="col-md-4">
+        <a href="gallery.html" class="info-card">
+          <h4>Photo Gallery</h4>
+          <p class="text-muted">See cool pictures of space.</p>
         </a>
       </div>
     </div>
   </div>
 </section>
-<!-- 6. Call to Action / Join Us -->
-<section class="py-5 text-center">
+
+<!-- The footer at the very bottom of the page -->
+<footer class="bottom-footer text-center">
   <div class="container">
-    <h2 class="h3 font-weight-bold text-white mb-2">Want to Work with Us?</h2>
-    <p class="text-muted mb-4 mx-auto" style="max-width: 500px;">We are always looking for smart engineers, scientists, and thinkers to join our mission.</p>
-    <a href="careers.html" class="btn btn-primary mr-3">See Open Jobs</a>
-    <a href="contact.html" class="btn btn-outline-light">Contact Us</a>
-  </div>
-</section>
-<!-- 7. Footer -->
-<footer class="footer-polaris text-center">
-  <div class="container small text-muted">
-    <p class="font-weight-bold text-white mb-1">POLARIS SPACE AGENCY</p>
-    <p class="mb-0">&copy; 2026 Polaris Space Agency. Simple Space Exploration for All.</p>
+    <p class="text-white mb-1">SPACE WEBSITE PROJECT</p>
+    <p class="mb-0">&copy; 2026 Space Website. All rights reserved.</p>
   </div>
 </footer>
+
+<!-- JavaScript files needed for the website to work -->
 <script src="bootstrap4.2.1/jquery-3.7.1.min.js"></script>
 <script src="bootstrap4.2.1/bootstrap4.2.1/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/main.js"></script>

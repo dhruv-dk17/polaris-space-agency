@@ -1,91 +1,88 @@
+<!-- We are telling the browser this is an HTML document -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic page settings -->
   <meta charset="UTF-8">
+  <!-- This makes the website look good on mobile phones -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Careers — Polaris Space Agency</title>
+  <title>Jobs — Space Website</title>
+  
+  <!-- Link to the Bootstrap CSS for ready-made designs -->
   <link rel="stylesheet" href="bootstrap4.2.1/bootstrap4.2.1/css/bootstrap.min.css">
+  <!-- Link to our own custom CSS file -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark navbar-polaris sticky-top">
+<!-- The top navigation menu bar -->
+<nav class="navbar navbar-expand-lg navbar-dark top-menu sticky-top">
   <div class="container">
-    <a class="navbar-brand font-weight-bold" href="index.html">POLARIS</a>
+    <a class="navbar-brand" href="index.html">SPACE WEBSITE</a>
+    <!-- The button that shows up on mobile phones to open the menu -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ml-auto align-items-center">
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="missions.html">Missions</a></li>
         <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
         <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-        <li class="nav-item active"><a class="nav-link" href="careers.html">Careers</a></li>
+        <li class="nav-item active"><a class="nav-link" href="careers.html">Jobs</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
+<!-- Page Header showing the title -->
 <div class="py-4 border-bottom" style="border-color: gray;">
   <div class="container">
-    <h1 class="h3 font-weight-bold text-white mb-1">Careers at Polaris</h1>
-    <p class="text-muted mb-0">Join our engineering and research teams in Bengaluru and Sriharikota.</p>
+    <h1 class="text-white">Jobs</h1>
+    <p class="text-muted">Apply for a job at our space website.</p>
   </div>
 </div>
 
+<!-- Main content section for jobs -->
 <section class="py-5">
   <div class="container">
     <div class="row">
+      <!-- Left side: List of open jobs -->
       <div class="col-lg-5 mb-4">
-        <h2 class="h4 font-weight-bold text-white mb-3">Open Positions</h2>
-        <div class="job-card">
+        <h2 class="text-white mb-3">Open Jobs</h2>
+        <div class="info-card">
           <span class="text-uppercase small font-weight-bold" style="color: goldenrod;">Engineering</span>
-          <h4 class="h5 font-weight-bold text-white mt-1">Senior Propulsion Engineer</h4>
-          <p class="small text-muted mb-0">Bengaluru · Cryogenic LOX/LH2 Stage Development</p>
-        </div>
-        <div class="job-card">
-          <span class="text-uppercase small font-weight-bold" style="color: goldenrod;">Software</span>
-          <h4 class="h5 font-weight-bold text-white mt-1">Flight Software Engineer</h4>
-          <p class="small text-muted mb-0">Bengaluru · Real-time Guidance & Telemetry</p>
+          <h4 class="text-white mt-1">Rocket Engineer</h4>
+          <p class="text-muted mb-0">Help us build rockets.</p>
         </div>
       </div>
       
+      <!-- Right side: The job application form -->
       <div class="col-lg-7">
-        <div class="calc-widget">
-          <h2 class="h4 font-weight-bold text-white mb-3">Submit Application</h2>
-          <form id="career-apply-form" novalidate>
-            <div class="form-row">
-              <div class="col-md-6 mb-3">
-                <label class="small text-muted font-weight-bold">First Name *</label>
-                <input type="text" id="apply-fname" class="form-control" placeholder="First Name" required>
-              </div>
-              <div class="col-md-6 mb-3">
-                <label class="small text-muted font-weight-bold">Last Name *</label>
-                <input type="text" id="apply-lname" class="form-control" placeholder="Last Name" required>
-              </div>
+        <div class="form-box">
+          <h2 class="text-white mb-3">Send Application</h2>
+          <!-- When the form is submitted, it calls checkJobForm() in main.js -->
+          <form onsubmit="return checkJobForm()">
+            <!-- Input box for first name -->
+            <div class="form-group">
+              <label for="firstName" class="text-muted font-weight-bold">First Name</label>
+              <input type="text" id="firstName" class="form-control" placeholder="First Name">
             </div>
-            <div class="form-row">
-              <div class="col-md-6 mb-3">
-                <label class="small text-muted font-weight-bold">Email Address *</label>
-                <input type="email" id="apply-email" class="form-control" placeholder="name@example.com" required>
-              </div>
-              <div class="col-md-6 mb-3">
-                <label class="small text-muted font-weight-bold">Contact Number *</label>
-                <input type="text" id="apply-phone" class="form-control" placeholder="10 Digits" required>
-              </div>
+            <!-- Input box for email address -->
+            <div class="form-group">
+              <label for="email" class="text-muted font-weight-bold">Email Address</label>
+              <input type="email" id="email" class="form-control" placeholder="name@example.com">
             </div>
-            <div class="mb-3">
-              <label class="small text-muted font-weight-bold">Position *</label>
-              <select id="apply-role" class="form-control" required>
+            <!-- Dropdown box to select the job position -->
+            <div class="form-group">
+              <label for="jobRole" class="text-muted font-weight-bold">Position</label>
+              <select id="jobRole" class="form-control">
                 <option value="">— Select a Role —</option>
-                <option>Senior Propulsion Engineer</option>
-                <option>Flight Software Engineer</option>
+                <option value="Rocket Engineer">Rocket Engineer</option>
+                <option value="Software Engineer">Software Engineer</option>
               </select>
             </div>
-            <div id="career-success" class="d-none p-3 mb-3 border rounded text-success small" style="border-color: green;">
-              Application submitted successfully! Our recruitment team will be in touch.
-            </div>
+            <!-- The submit button -->
             <button type="submit" class="btn btn-primary px-4 py-2">Submit Application</button>
           </form>
         </div>
@@ -94,13 +91,15 @@
   </div>
 </section>
 
-<footer class="footer-polaris text-center">
-  <div class="container small text-muted">
-    <p class="font-weight-bold text-white mb-1">POLARIS SPACE AGENCY</p>
-    <p class="mb-0">&copy; 2026 Polaris Space Agency. All rights reserved.</p>
+<!-- The footer at the very bottom of the page -->
+<footer class="bottom-footer text-center">
+  <div class="container">
+    <p class="text-white mb-1">SPACE WEBSITE PROJECT</p>
+    <p class="mb-0">&copy; 2026 Space Website. All rights reserved.</p>
   </div>
 </footer>
 
+<!-- JavaScript files needed for the website to work -->
 <script src="bootstrap4.2.1/jquery-3.7.1.min.js"></script>
 <script src="bootstrap4.2.1/bootstrap4.2.1/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
