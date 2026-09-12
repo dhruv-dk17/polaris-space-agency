@@ -1,79 +1,86 @@
-<!-- We are telling the browser this is an HTML document -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic page settings -->
   <meta charset="UTF-8">
-  <!-- This makes the website look good on mobile phones -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Research — Space Website</title>
-  
-  <!-- Link to the Bootstrap CSS for ready-made designs -->
+  <title>Research — Polaris Space Agency</title>
   <link rel="stylesheet" href="bootstrap4.2.1/bootstrap4.2.1/css/bootstrap.min.css">
-  <!-- Link to our own custom CSS file -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<!-- The top navigation menu bar -->
-<nav class="navbar navbar-expand-lg navbar-dark top-menu sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark navbar-polaris sticky-top">
   <div class="container">
-    <a class="navbar-brand" href="index.html">SPACE WEBSITE</a>
-    <!-- The button that shows up on mobile phones to open the menu -->
+    <a class="navbar-brand font-weight-bold" href="index.html">POLARIS</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ml-auto align-items-lg-center">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="missions.html">Missions</a></li>
         <li class="nav-item active"><a class="nav-link" href="research.html">Research</a></li>
         <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="careers.html">Jobs</a></li>
+        <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Page Header showing the title -->
 <div class="py-4 border-bottom" style="border-color: gray;">
   <div class="container">
-    <h1 class="text-white">Our Research</h1>
-    <p class="text-muted">Science experiments we are doing.</p>
+    <h1 class="h3 font-weight-bold text-white mb-1">Scientific Research</h1>
+    <p class="text-muted mb-0">Pushing the boundaries of aerospace engineering and deep-space astronomy.</p>
   </div>
 </div>
 
-<!-- Main content section for research -->
 <section class="py-5">
   <div class="container">
+    <div class="row align-items-center mb-5">
+      <div class="col-12 col-md-6 mb-4 mb-md-0">
+        <img src="assets/images/telescope.jpg" alt="Observatory Telescope" class="img-fluid rounded" style="border: 1px solid gray;">
+      </div>
+      <div class="col-12 col-md-6">
+        <span class="text-uppercase small font-weight-bold" style="color: goldenrod;">Deep Sky Array</span>
+        <h2 class="h4 font-weight-bold text-white mt-1 mb-3">Hanle Optical Observatory</h2>
+        <p class="text-muted">Located at 4,500m altitude in Ladakh, our precision telescope array surveys deep-sky nebulae, galactic clusters, and solar wind flares in pristine, zero-light-pollution conditions.</p>
+      </div>
+    </div>
+
+    <h2 class="h4 font-weight-bold text-white mb-4">Active Research Domains</h2>
     <div class="row">
-      <!-- First research topic -->
-      <div class="col-md-12 mb-4">
-        <div class="info-card">
-          <h2 class="text-white">Plant Growth in Space</h2>
-          <p class="text-muted">We are studying how plants grow without gravity. This will help astronauts eat fresh food on long trips.</p>
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="facility-card h-100 mb-0">
+          <span class="text-uppercase small font-weight-bold" style="color: goldenrod;">Propulsion</span>
+          <h4 class="h5 font-weight-bold text-white mt-1">Cryogenic Engines</h4>
+          <p class="small text-muted mb-0">Developing high-thrust LOX/LH2 staged-combustion upper stages for orbital missions.</p>
         </div>
       </div>
-      <!-- Second research topic -->
-      <div class="col-md-12 mb-4">
-        <div class="info-card">
-          <h2 class="text-white">Better Spacesuits</h2>
-          <p class="text-muted">We are making new spacesuits that are lighter and easier to move in.</p>
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="facility-card h-100 mb-0">
+          <span class="text-uppercase small font-weight-bold" style="color: goldenrod;">Planetary Science</span>
+          <h4 class="h5 font-weight-bold text-white mt-1">Astrobiology & Regolith</h4>
+          <p class="small text-muted mb-0">Spectroscopic soil analysis from lunar south pole samples and mineral crystallizations.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="facility-card h-100 mb-0">
+          <span class="text-uppercase small font-weight-bold" style="color: goldenrod;">Earth Sciences</span>
+          <h4 class="h5 font-weight-bold text-white mt-1">Orbital Telemetry</h4>
+          <p class="small text-muted mb-0">Multi-spectral payload development for agricultural metrics and glacier change tracking.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- The footer at the very bottom of the page -->
-<footer class="bottom-footer text-center">
-  <div class="container">
-    <p class="text-white mb-1">SPACE WEBSITE PROJECT</p>
-    <p class="mb-0">&copy; 2026 Space Website. All rights reserved.</p>
+<footer class="footer-polaris text-center">
+  <div class="container small text-muted">
+    <p class="font-weight-bold text-white mb-1">POLARIS SPACE AGENCY</p>
+    <p class="mb-0">&copy; 2026 Polaris Space Agency. All rights reserved.</p>
   </div>
 </footer>
 
-<!-- JavaScript files needed for the website to work -->
 <script src="bootstrap4.2.1/jquery-3.7.1.min.js"></script>
 <script src="bootstrap4.2.1/bootstrap4.2.1/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/main.js"></script>

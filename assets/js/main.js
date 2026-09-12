@@ -1,83 +1,68 @@
-// Space Agency Website - main.js
+// Polaris Space Agency - main.js
 
-// This function checks the Create Account form
-function checkRegisterForm() {
-  // Get all the values that the user typed in
-  var firstName = document.getElementById("firstName").value;
-  var lastName = document.getElementById("lastName").value;
-  var email = document.getElementById("email").value;
-  var password = document.getElementById("password").value;
-  var confirmPassword = document.getElementById("confirmPassword").value;
+function validateForm1() {
+  var f = document.getElementById("reg-fname").value;
+  var l = document.getElementById("reg-lname").value;
+  var e = document.getElementById("reg-email").value;
+  var p = document.getElementById("reg-password").value;
+  var c = document.getElementById("reg-confirm").value;
 
-  // Check if first name or last name is empty
-  if (firstName.trim() == "" || lastName.trim() == "") {
+  if (f.trim() == "" || l.trim() == "") {
     alert("First name and Last name are required.");
-    return false; // Stop the form from submitting
+    return false;
   }
 
-  // Find where the @ and . are in the email
-  var atPosition = email.indexOf("@");
-  var dotPosition = email.lastIndexOf(".");
-  
-  // Make sure the email has an @ and a . in the correct places
-  if (atPosition < 1 || (dotPosition - atPosition) < 2) {
+  var at = e.indexOf("@");
+  var dot = e.lastIndexOf(".");
+  if (at < 1 || (dot - at) < 2) {
     alert("Please enter a valid email address.");
     return false;
   }
 
-  // Password must be at least 8 characters long
-  if (password.length < 8) {
+  if (p.length < 8) {
     alert("Password must contain at least 8 characters.");
     return false;
   }
 
-  // Make sure both passwords match
-  if (password != confirmPassword) {
+  if (p != c) {
     alert("Password and Confirm Password must be same.");
     return false;
   }
 
-  // Ask the user if they are sure
-  var userChoice = confirm("Are you sure you want to create this account?");
-  if (userChoice == true) {
+  var ok = confirm("Are you sure you want to create this account?");
+  if (ok) {
     alert("Account created successfully!");
-    return true; // Submit the form
+    return true;
   } else {
     alert("Action cancelled.");
     return false;
   }
 }
 
-// This function checks the Contact Us form
-function checkContactForm() {
-  // Get values from the contact form
-  var firstName = document.getElementById("firstName").value;
-  var email = document.getElementById("email").value;
-  var phone = document.getElementById("phone").value;
-  var message = document.getElementById("message").value;
+function validateForm2() {
+  var f = document.getElementById("con-fname").value;
+  var e = document.getElementById("con-email").value;
+  var ph = document.getElementById("con-phone").value;
+  var m = document.getElementById("con-msg").value;
 
-  // Check if first name is empty
-  if (firstName.trim() == "") {
+  if (f.trim() == "") {
     alert("First Name is required.");
     return false;
   }
 
-  // Check if email is valid
-  var atPosition = email.indexOf("@");
-  var dotPosition = email.lastIndexOf(".");
-  if (atPosition < 1 || (dotPosition - atPosition) < 2) {
+  var at = e.indexOf("@");
+  var dot = e.lastIndexOf(".");
+  if (at < 1 || (dot - at) < 2) {
     alert("Please enter a valid email address.");
     return false;
   }
 
-  // Phone number must be numbers only and exactly 10 digits
-  if (isNaN(phone) || phone.length != 10) {
+  if (isNaN(ph) || ph.length != 10) {
     alert("Contact number must be exactly 10 digits and only numbers.");
     return false;
   }
 
-  // Check if they typed a message
-  if (message.trim() == "") {
+  if (m.trim() == "") {
     alert("Please enter your message.");
     return false;
   }
@@ -86,35 +71,30 @@ function checkContactForm() {
   return true;
 }
 
-// This function checks the Job Application form
-function checkJobForm() {
-  // Get values from the jobs form
-  var firstName = document.getElementById("firstName").value;
-  var email = document.getElementById("email").value;
-  var jobRole = document.getElementById("jobRole").value;
+function validateForm3() {
+  var f = document.getElementById("apply-fname").value;
+  var e = document.getElementById("apply-email").value;
+  var r = document.getElementById("apply-role").value;
 
-  if (firstName.trim() == "") {
+  if (f.trim() == "") {
     alert("First Name is required.");
     return false;
   }
 
-  // Check if email is valid
-  var atPosition = email.indexOf("@");
-  var dotPosition = email.lastIndexOf(".");
-  if (atPosition < 1 || (dotPosition - atPosition) < 2) {
+  var at = e.indexOf("@");
+  var dot = e.lastIndexOf(".");
+  if (at < 1 || (dot - at) < 2) {
     alert("Please enter a valid email address.");
     return false;
   }
 
-  // Check if a job position was selected from the dropdown
-  if (jobRole == "") {
+  if (r == "") {
     alert("Please select a position.");
     return false;
   }
 
-  // Ask if they are sure they want to apply for that specific job
-  var userChoice = confirm("Do you want to submit your application for " + jobRole + "?");
-  if (userChoice == true) {
+  var ok = confirm("Do you want to submit your application for " + r + "?");
+  if (ok) {
     alert("Application Submitted Successfully!");
     return true;
   } else {

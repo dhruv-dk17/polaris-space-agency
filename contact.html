@@ -1,107 +1,89 @@
-<!-- We are telling the browser this is an HTML document -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic page settings -->
   <meta charset="UTF-8">
-  <!-- This makes the website look good on mobile phones -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — Space Website</title>
-  
-  <!-- Link to the Bootstrap CSS for ready-made designs -->
+  <title>Contact — Polaris Space Agency</title>
   <link rel="stylesheet" href="bootstrap4.2.1/bootstrap4.2.1/css/bootstrap.min.css">
-  <!-- Link to our own custom CSS file -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-<!-- The top navigation menu bar -->
-<nav class="navbar navbar-expand-lg navbar-dark top-menu sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark navbar-polaris sticky-top">
   <div class="container">
-    <a class="navbar-brand" href="index.html">SPACE WEBSITE</a>
-    <!-- The button that shows up on mobile phones to open the menu -->
+    <a class="navbar-brand font-weight-bold" href="index.html">POLARIS</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ml-auto align-items-center">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="missions.html">Missions</a></li>
         <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
         <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="careers.html">Jobs</a></li>
+        <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
         <li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Page Header showing the title -->
 <div class="py-4 border-bottom" style="border-color: gray;">
   <div class="container">
-    <h1 class="text-white">Contact Us</h1>
-    <p class="text-muted">Send us a message if you have any questions.</p>
+    <h1 class="h3 font-weight-bold text-white mb-1">Get in Touch</h1>
+    <p class="text-muted mb-0">For partnerships, launch services, and research inquiries.</p>
   </div>
 </div>
 
-<!-- Main content section for contact -->
 <section class="py-5">
   <div class="container">
     <div class="row">
-      <!-- Left side: The contact form -->
-      <div class="col-lg-7 mb-4">
-        <div class="form-box">
-          <h2 class="text-white mb-3">Send a Message</h2>
-          <!-- When the form is submitted, it calls checkContactForm() in main.js -->
-          <form onsubmit="return checkContactForm()">
-            <!-- Input box for first name -->
+      <div class="col-lg-7 mb-4 mb-lg-0">
+        <div class="calc-widget">
+          <h2 class="h4 font-weight-bold text-white mb-3">Send a Message</h2>
+          <form onsubmit="return validateForm2()">
             <div class="form-group">
-              <label for="firstName" class="text-muted font-weight-bold">First Name</label>
-              <input type="text" id="firstName" class="form-control" placeholder="First Name">
+              <label for="con-fname" class="small text-muted font-weight-bold">First Name *</label>
+              <input type="text" id="con-fname" class="form-control" placeholder="First Name" required>
             </div>
-            <!-- Input box for email address -->
             <div class="form-group">
-              <label for="email" class="text-muted font-weight-bold">Email Address</label>
-              <input type="email" id="email" class="form-control" placeholder="name@example.com">
+              <label for="con-lname" class="small text-muted font-weight-bold">Last Name *</label>
+              <input type="text" id="con-lname" class="form-control" placeholder="Last Name" required>
             </div>
-            <!-- Input box for phone number -->
             <div class="form-group">
-              <label for="phone" class="text-muted font-weight-bold">Phone Number</label>
-              <input type="text" id="phone" class="form-control" placeholder="10 Digits">
+              <label for="con-email" class="small text-muted font-weight-bold">Email Address *</label>
+              <input type="email" id="con-email" class="form-control" placeholder="name@example.com" required>
             </div>
-            <!-- Big text area for the message -->
             <div class="form-group">
-              <label for="message" class="text-muted font-weight-bold">Message</label>
-              <textarea id="message" class="form-control" rows="3" placeholder="How can we help you?"></textarea>
+              <label for="con-phone" class="small text-muted font-weight-bold">Contact Number *</label>
+              <input type="text" id="con-phone" class="form-control" placeholder="10 Digits" required>
             </div>
-            <!-- The submit button -->
+            <div class="form-group">
+              <label for="con-msg" class="small text-muted font-weight-bold">Message *</label>
+              <textarea id="con-msg" class="form-control" rows="3" placeholder="How can we help you?" required></textarea>
+            </div>
             <button type="submit" class="btn btn-primary px-4 py-2">Send Message</button>
           </form>
         </div>
       </div>
-      
-      <!-- Right side: Office contact details -->
       <div class="col-lg-5">
-        <div class="info-card h-100 mb-0">
-          <h3 class="text-white mb-3">Our Office</h3>
-          <p class="text-muted mb-2"><strong class="text-white">Email:</strong><br>hello@spacewebsite.com</p>
-          <p class="text-muted mb-3"><strong class="text-white">Phone:</strong><br>123-456-7890</p>
-          <h3 class="text-white mb-1">Address</h3>
-          <p class="text-muted mb-0">College Road, City Name</p>
+        <div class="facility-card h-100 mb-0">
+          <h3 class="h5 font-weight-bold text-white mb-3">Direct Channels</h3>
+          <p class="small text-muted mb-2"><strong class="text-white">General Inquiries:</strong><br>contact@polaris.space.in · +91 80 1234 5678</p>
+          <p class="small text-muted mb-3"><strong class="text-white">Press & Media:</strong><br>press@polaris.space.in · +91 80 1234 5680</p>
+          <h3 class="h6 font-weight-bold text-white mb-1">Headquarters</h3>
+          <p class="small text-muted mb-0">Polaris Aerospace Park, Whitefield, Bengaluru 560066, India</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- The footer at the very bottom of the page -->
-<footer class="bottom-footer text-center">
-  <div class="container">
-    <p class="text-white mb-1">SPACE WEBSITE PROJECT</p>
-    <p class="mb-0">&copy; 2026 Space Website. All rights reserved.</p>
+<footer class="footer-polaris text-center">
+  <div class="container small text-muted">
+    <p class="font-weight-bold text-white mb-1">POLARIS SPACE AGENCY</p>
+    <p class="mb-0">&copy; 2026 Polaris Space Agency. All rights reserved.</p>
   </div>
 </footer>
 
-<!-- JavaScript files needed for the website to work -->
 <script src="bootstrap4.2.1/jquery-3.7.1.min.js"></script>
 <script src="bootstrap4.2.1/bootstrap4.2.1/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
