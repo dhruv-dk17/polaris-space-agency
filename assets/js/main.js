@@ -1,5 +1,4 @@
 // Polaris Space Agency - main.js
-
 // Register Form Validation
 function validateForm1() {
   var name = document.getElementById("reg-fname").value;
