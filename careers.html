@@ -26,7 +26,7 @@
       </div>
     </div>
   </nav>
-  <div class="py-4 border-bottom" style="border-color:gray">
+  <div class="py-4 border-bottom border-secondary">
     <div class="container">
       <h1 class="h3 font-weight-bold text-white mb-1">Careers at Polaris</h1>
       <p class="text-muted mb-0">Join our engineering and research teams in Bengaluru and Sriharikota.</p>
@@ -36,34 +36,38 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-5 mb-4">
-          <h2 class="h4 font-weight-bold text-white mb-3">Open Positions</h2>
+          <h2 class="h5 font-weight-bold text-white mb-3">Open Positions</h2>
           <div class="job-card">
-            <span class="text-uppercase small font-weight-bold" style="color:goldenrod">Engineering</span>
-            <h4 class="h5 font-weight-bold text-white mt-1">Senior Propulsion Engineer</h4>
+            <span class="small font-weight-bold text-uppercase" style="color:goldenrod">Engineering</span>
+            <h4 class="h6 font-weight-bold text-white mt-1">Senior Propulsion Engineer</h4>
             <p class="small text-muted mb-0">Bengaluru · Cryogenic LOX/LH2 Stage Development</p>
           </div>
         </div>
         <div class="col-lg-7">
           <div class="calc-widget">
-            <h2 class="h4 font-weight-bold text-white mb-3">Submit Application</h2>
-            <form onsubmit="return validateForm3()">
+            <h2 class="h5 font-weight-bold text-white mb-3">Submit Application</h2>
+            <form>
               <div class="form-group">
                 <label for="apply-fname" class="small text-muted font-weight-bold">First Name *</label>
-                <input type="text" id="apply-fname" class="form-control" placeholder="First Name">
+                <input type="text" id="apply-fname" class="form-control" placeholder="First Name" required>
+              </div>
+              <div class="form-group">
+                <label for="apply-lname" class="small text-muted font-weight-bold">Last Name *</label>
+                <input type="text" id="apply-lname" class="form-control" placeholder="Last Name" required>
               </div>
               <div class="form-group">
                 <label for="apply-email" class="small text-muted font-weight-bold">Email Address *</label>
-                <input type="email" id="apply-email" class="form-control" placeholder="name@example.com">
+                <input type="email" id="apply-email" class="form-control" placeholder="name@example.com" required>
               </div>
               <div class="form-group">
                 <label for="apply-role" class="small text-muted font-weight-bold">Position *</label>
-                <select id="apply-role" class="form-control">
+                <select id="apply-role" class="form-control" required>
                   <option value="">— Select a Role —</option>
                   <option>Senior Propulsion Engineer</option>
                   <option>Flight Software Engineer</option>
                 </select>
               </div>
-              <button type="submit" class="btn btn-primary px-4 py-2">Submit Application</button>
+              <button type="submit" class="btn btn-primary">Submit Application</button>
             </form>
           </div>
         </div>

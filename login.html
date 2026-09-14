@@ -29,22 +29,22 @@
   <div class="container py-5">
     <div class="row justify-content-center">
       <div class="col-md-6 col-lg-5">
-        <div class="calc-widget p-4">
+        <div class="calc-widget">
           <h1 class="h4 font-weight-bold text-white mb-3 text-center">Sign In</h1>
-          <form id="login-form" novalidate>
-            <div class="mb-3">
+          <form id="login-form" onsubmit="return validateForm3()" novalidate>
+            <div class="form-group">
               <label class="small text-muted font-weight-bold">Email Address *</label>
               <input type="email" id="login-email" class="form-control" placeholder="you@example.com">
             </div>
-            <div class="mb-3">
+            <div class="form-group">
               <label class="small text-muted font-weight-bold">Password *</label>
               <input type="password" id="login-password" class="form-control" placeholder="••••••••">
             </div>
-            <button type="submit" class="btn btn-primary w-100 py-2">Sign In</button>
+            <button type="submit" class="btn btn-primary btn-block py-2">Sign In</button>
           </form>
-          <div class="text-center mt-3 text-muted small">
-            Don't have an account? <a href="register.html">Create one</a>
-          </div>
+          <p class="text-center mt-3 text-muted small mb-0">
+            No account? <a href="register.html">Create one</a>
+          </p>
         </div>
       </div>
     </div>

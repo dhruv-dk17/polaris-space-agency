@@ -1,103 +1,82 @@
 // Polaris Space Agency - main.js
 
+// Register Form Validation
 function validateForm1() {
-  var f = document.getElementById("reg-fname").value;
-  var l = document.getElementById("reg-lname").value;
-  var e = document.getElementById("reg-email").value;
-  var p = document.getElementById("reg-password").value;
-  var c = document.getElementById("reg-confirm").value;
+  var name = document.getElementById("reg-fname").value;
+  var email = document.getElementById("reg-email").value;
+  var password = document.getElementById("reg-password").value;
 
-  if (f.trim() == "" || l.trim() == "") {
-    alert("First name and Last name are required.");
+  if (name == "") {
+    alert("name is required");
     return false;
   }
 
-  var at = e.indexOf("@");
-  var dot = e.lastIndexOf(".");
-  if (at < 1 || (dot - at) < 2) {
-    alert("Please enter a valid email address.");
+  if (password == "") {
+    alert("please enter password");
     return false;
   }
 
-  if (p.length < 8) {
-    alert("Password must contain at least 8 characters.");
+  var at_position = email.indexOf("@");
+  var dot_position = email.lastIndexOf(".");
+  if ((at_position < 1) || ((dot_position - at_position) < 2)) {
+    alert("Please enter correct email ID");
     return false;
   }
 
-  if (p != c) {
-    alert("Password and Confirm Password must be same.");
-    return false;
-  }
-
-  var ok = confirm("Are you sure you want to create this account?");
-  if (ok) {
-    alert("Account created successfully!");
-    return true;
-  } else {
-    alert("Action cancelled.");
-    return false;
-  }
-}
-
-function validateForm2() {
-  var f = document.getElementById("con-fname").value;
-  var e = document.getElementById("con-email").value;
-  var ph = document.getElementById("con-phone").value;
-  var m = document.getElementById("con-msg").value;
-
-  if (f.trim() == "") {
-    alert("First Name is required.");
-    return false;
-  }
-
-  var at = e.indexOf("@");
-  var dot = e.lastIndexOf(".");
-  if (at < 1 || (dot - at) < 2) {
-    alert("Please enter a valid email address.");
-    return false;
-  }
-
-  if (isNaN(ph) || ph.length != 10) {
-    alert("Contact number must be exactly 10 digits and only numbers.");
-    return false;
-  }
-
-  if (m.trim() == "") {
-    alert("Please enter your message.");
-    return false;
-  }
-
-  alert("Message sent successfully! Our team will respond shortly.");
+  alert("Account created successfully!");
   return true;
 }
 
+// Contact Form Validation
+function validateForm2() {
+  var name = document.getElementById("con-fname").value;
+  var email = document.getElementById("con-email").value;
+  var mobile_no = document.getElementById("con-phone").value;
+
+  if (name == "") {
+    alert("name is required");
+    return false;
+  }
+
+  var at_position = email.indexOf("@");
+  var dot_position = email.lastIndexOf(".");
+  if ((at_position < 1) || ((dot_position - at_position) < 2)) {
+    alert("Please enter correct email ID");
+    return false;
+  }
+
+  var mobile_no_format = /^\d{10}$/;
+  if (!mobile_no.match(mobile_no_format)) {
+    alert("Input is not a valid 10-digit number");
+    return false;
+  }
+
+  alert("Message sent successfully!");
+  return true;
+}
+
+// Sign In Form Validation
 function validateForm3() {
-  var f = document.getElementById("apply-fname").value;
-  var e = document.getElementById("apply-email").value;
-  var r = document.getElementById("apply-role").value;
+  var email = document.getElementById("login-email").value;
+  var password = document.getElementById("login-password").value;
 
-  if (f.trim() == "") {
-    alert("First Name is required.");
+  if (email == "") {
+    alert("email is required");
     return false;
   }
 
-  var at = e.indexOf("@");
-  var dot = e.lastIndexOf(".");
-  if (at < 1 || (dot - at) < 2) {
-    alert("Please enter a valid email address.");
+  var at_position = email.indexOf("@");
+  var dot_position = email.lastIndexOf(".");
+  if ((at_position < 1) || ((dot_position - at_position) < 2)) {
+    alert("Please enter correct email ID");
     return false;
   }
 
-  if (r == "") {
-    alert("Please select a position.");
+  if (password == "") {
+    alert("please enter password");
     return false;
   }
 
-  var ok = confirm("Do you want to submit your application for " + r + "?");
-  if (ok) {
-    alert("Application Submitted Successfully!");
-    return true;
-  } else {
-    return false;
-  }
+  alert("Sign In successful!");
+  return true;
 }

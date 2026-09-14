@@ -26,7 +26,7 @@
       </div>
     </div>
   </nav>
-  <div class="py-4 border-bottom" style="border-color:gray">
+  <div class="py-4 border-bottom border-secondary">
     <div class="container">
       <h1 class="h3 font-weight-bold text-white mb-1">Get in Touch</h1>
       <p class="text-muted mb-0">For partnerships, launch services, and research inquiries.</p>
@@ -35,36 +35,40 @@
   <section class="py-5">
     <div class="container">
       <div class="row">
-        <div class="col-lg-7 mb-4 mb-lg-0">
+        <div class="col-lg-7 mb-4">
           <div class="calc-widget">
-            <h2 class="h4 font-weight-bold text-white mb-3">Send a Message</h2>
+            <h2 class="h5 font-weight-bold text-white mb-3">Send a Message</h2>
+            <div id="con-alert" class="alert d-none"></div>
             <form onsubmit="return validateForm2()">
               <div class="form-group">
                 <label for="con-fname" class="small text-muted font-weight-bold">First Name *</label>
                 <input type="text" id="con-fname" class="form-control" placeholder="First Name">
+                <div class="invalid-feedback">First Name is required.</div>
               </div>
               <div class="form-group">
                 <label for="con-email" class="small text-muted font-weight-bold">Email Address *</label>
                 <input type="email" id="con-email" class="form-control" placeholder="name@example.com">
+                <div class="invalid-feedback">Enter a valid email address.</div>
               </div>
               <div class="form-group">
                 <label for="con-phone" class="small text-muted font-weight-bold">Contact Number *</label>
                 <input type="text" id="con-phone" class="form-control" placeholder="10 Digits">
+                <div class="invalid-feedback">Phone must be exactly 10 digits.</div>
               </div>
               <div class="form-group">
                 <label for="con-msg" class="small text-muted font-weight-bold">Message *</label>
                 <textarea id="con-msg" class="form-control" rows="3" placeholder="How can we help you?"></textarea>
+                <div class="invalid-feedback">Please enter your message.</div>
               </div>
-              <button type="submit" class="btn btn-primary px-4 py-2">Send Message</button>
+              <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
           </div>
         </div>
         <div class="col-lg-5">
-          <div class="facility-card h-100 mb-0">
-            <h3 class="h5 font-weight-bold text-white mb-3">Direct Channels</h3>
+          <div class="facility-card">
+            <h3 class="h6 font-weight-bold text-white mb-3">Direct Channels</h3>
             <p class="small text-muted mb-2"><strong class="text-white">General:</strong> contact@polaris.space.in</p>
             <p class="small text-muted mb-3"><strong class="text-white">Press:</strong> press@polaris.space.in</p>
-            <h3 class="h6 font-weight-bold text-white mb-1">Headquarters</h3>
             <p class="small text-muted mb-0">Polaris Aerospace Park, Whitefield, Bengaluru 560066</p>
           </div>
         </div>
