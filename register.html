@@ -8,70 +8,67 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-<nav class="navbar navbar-expand-lg navbar-dark navbar-polaris sticky-top">
-  <div class="container">
-    <a class="navbar-brand font-weight-bold" href="index.html">POLARIS</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav"><span class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ml-auto align-items-center">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="missions.html">Missions</a></li>
-        <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-polaris sticky-top">
+    <div class="container">
+      <a class="navbar-brand font-weight-bold" href="index.html">POLARIS</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="missions.html">Missions</a></li>
+          <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
-
-<div class="container py-5">
-  <div class="row justify-content-center">
-    <div class="col-md-8 col-lg-6">
-      <div class="calc-widget p-4">
-        <h1 class="h4 font-weight-bold text-white mb-3 text-center">Create an Account</h1>
-        <form onsubmit="return validateForm1()">
-          <div class="form-group">
-            <label for="reg-fname" class="small text-muted font-weight-bold">First Name *</label>
-            <input type="text" id="reg-fname" class="form-control" placeholder="First Name" required>
+  </nav>
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="calc-widget p-4">
+          <h1 class="h4 font-weight-bold text-white mb-3 text-center">Create an Account</h1>
+          <form onsubmit="return validateForm1()">
+            <div class="form-group">
+              <label for="reg-fname" class="small text-muted font-weight-bold">First Name *</label>
+              <input type="text" id="reg-fname" class="form-control" placeholder="First Name">
+            </div>
+            <div class="form-group">
+              <label for="reg-lname" class="small text-muted font-weight-bold">Last Name *</label>
+              <input type="text" id="reg-lname" class="form-control" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+              <label for="reg-email" class="small text-muted font-weight-bold">Email Address *</label>
+              <input type="email" id="reg-email" class="form-control" placeholder="name@example.com">
+            </div>
+            <div class="form-group">
+              <label for="reg-password" class="small text-muted font-weight-bold">Password *</label>
+              <input type="password" id="reg-password" class="form-control" placeholder="••••••••">
+            </div>
+            <div class="form-group">
+              <label for="reg-confirm" class="small text-muted font-weight-bold">Confirm Password *</label>
+              <input type="password" id="reg-confirm" class="form-control" placeholder="••••••••">
+            </div>
+            <button type="submit" class="btn btn-primary w-100 py-2">Create Account</button>
+          </form>
+          <div class="text-center mt-3 text-muted small">
+            Already have an account? <a href="login.html">Sign in</a>
           </div>
-          <div class="form-group">
-            <label for="reg-lname" class="small text-muted font-weight-bold">Last Name *</label>
-            <input type="text" id="reg-lname" class="form-control" placeholder="Last Name" required>
-          </div>
-          <div class="form-group">
-            <label for="reg-email" class="small text-muted font-weight-bold">Email Address *</label>
-            <input type="email" id="reg-email" class="form-control" placeholder="name@example.com" required>
-          </div>
-          <div class="form-group">
-            <label for="reg-password" class="small text-muted font-weight-bold">Password *</label>
-            <input type="password" id="reg-password" class="form-control" placeholder="••••••••" required>
-          </div>
-          <div class="form-group">
-            <label for="reg-confirm" class="small text-muted font-weight-bold">Confirm Password *</label>
-            <input type="password" id="reg-confirm" class="form-control" placeholder="••••••••" required>
-          </div>
-          <button type="submit" class="btn btn-primary w-100 py-2">Create Account</button>
-        </form>
-        <div class="text-center mt-3 text-muted small">
-          Already have an account? <a href="login.html">Sign in</a>
         </div>
       </div>
     </div>
   </div>
-</div>
-
-<footer class="footer-polaris text-center">
-  <div class="container small text-muted">
-    <p class="font-weight-bold text-white mb-1">POLARIS SPACE AGENCY</p>
-    <p class="mb-0">&copy; 2026 Polaris Space Agency. All rights reserved.</p>
-  </div>
-</footer>
-
-<script src="bootstrap4.2.1/jquery-3.7.1.min.js"></script>
-<script src="bootstrap4.2.1/bootstrap4.2.1/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/main.js"></script>
+  <footer class="footer-polaris text-center">
+    <div class="container small text-muted">
+      <p class="font-weight-bold text-white mb-1">POLARIS SPACE AGENCY</p>
+      <p class="mb-0">&copy; 2026 Polaris Space Agency. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="bootstrap4.2.1/jquery-3.7.1.min.js"></script>
+  <script src="bootstrap4.2.1/bootstrap4.2.1/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
