@@ -22,6 +22,23 @@ function validateForm1() {
     return false;
   }
 
+  var age = prompt("Please enter your age (must be 18 or older to register):");
+  if (age == null || age == "") {
+    alert("Age is required to register");
+    return false;
+  }
+  
+  if (isNaN(age) || parseInt(age) < 18) {
+    alert("You must be at least 18 years old");
+    return false;
+  }
+
+  var isSure = confirm("Are you sure you want to create this account?");
+  if (!isSure) {
+    alert("Registration cancelled.");
+    return false;
+  }
+
   alert("Account created successfully!");
   return true;
 }
@@ -79,3 +96,4 @@ function validateForm3() {
   alert("Sign In successful!");
   return true;
 }
+
